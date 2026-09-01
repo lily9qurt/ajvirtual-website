@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Progress Monitoring | Anushka Joshi</title>
+    <meta name="description"
+        content="Independent visual documentation and construction progress monitoring for residential and commercial fit-out projects.">
+    <style>
+        :root {
+            --bg: #f5f2eb;
+            --surface: #fffdf8;
+            --ink: #17201d;
+            --muted: #64706b;
+            --line: #d9ddd7;
+            --accent: #23483f;
+            --accent2: #d9a441;
+            --dark: #10211d;
+            --radius: 22px;
+            --shadow: 0 18px 55px rgba(22, 35, 31, .09);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+            line-height: 1.65
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .container {
+            width: min(1160px, 92%);
+            margin: auto
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(245, 242, 235, .9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(217, 221, 215, .7)
+        }
+
+        .nav-inner {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .logo {
+            font-weight: 900;
+            letter-spacing: -.04em;
+            font-size: 1.1rem
+        }
+
+        .logo span {
+            color: var(--accent2)
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            font-size: .92rem;
+            color: var(--muted)
+        }
+
+        .nav-links a:hover {
+            color: var(--accent)
+        }
+
+        .menu {
+            display: none;
+            background: none;
+            border: 0;
+            font-size: 1.5rem
+        }
+
+        .hero {
+            padding: 110px 0 90px;
+            background: radial-gradient(circle at 80% 15%, #e5dfcf 0, transparent 30%), linear-gradient(135deg, #f5f2eb, #e8eee9)
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 70px;
+            align-items: center
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: .15em;
+            font-weight: 800;
+            font-size: .75rem;
+            color: var(--accent);
+            margin-bottom: 18px
+        }
+
+        h1 {
+            font-size: clamp(3rem, 7vw, 5.9rem);
+            line-height: .98;
+            letter-spacing: -.065em;
+            max-width: 780px
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 680px;
+            margin: 26px 0
+        }
+
+        .ctas {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+            margin-top: 28px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 20px;
+            border-radius: 999px;
+            font-weight: 800;
+            border: 1px solid var(--accent)
+        }
+
+        .btn.primary {
+            background: var(--accent);
+            color: white
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: var(--accent)
+        }
+
+        .hero-card {
+            background: var(--dark);
+            color: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-card:after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 50%;
+            right: -50px;
+            top: -60px
+        }
+
+        .hero-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 22px
+        }
+
+        .stat {
+            padding: 16px 0;
+            border-top: 1px solid rgba(255, 255, 255, .15);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .stat strong {
+            color: #fff
+        }
+
+        .stat span {
+            color: #b9c5bf;
+            text-align: right
+        }
+
+        section {
+            padding: 95px 0
+        }
+
+        .section-head {
+            max-width: 760px;
+            margin-bottom: 45px
+        }
+
+        .section-head h2 {
+            font-size: clamp(2.2rem, 4vw, 3.7rem);
+            line-height: 1.05;
+            letter-spacing: -.05em;
+            margin: 8px 0 16px
+        }
+
+        .section-head p {
+            color: var(--muted);
+            font-size: 1.05rem
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 27px;
+            box-shadow: 0 8px 25px rgba(22, 35, 31, .03)
+        }
+
+        .number {
+            font-size: .75rem;
+            font-weight: 900;
+            color: var(--accent2);
+            letter-spacing: .12em
+        }
+
+        .card h3 {
+            margin: 10px 0 10px;
+            font-size: 1.25rem
+        }
+
+        .card p,
+        .card li {
+            color: var(--muted);
+            font-size: .94rem
+        }
+
+        .card ul {
+            padding-left: 18px;
+            margin-top: 14px
+        }
+
+        .card li {
+            margin: 5px 0
+        }
+
+        .alt {
+            background: #e8eee9
+        }
+
+        .stakeholders {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .stake {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 28px
+        }
+
+        .stake h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px
+        }
+
+        .stake p {
+            color: var(--muted);
+            margin-bottom: 13px
+        }
+
+        .stake ul {
+            padding-left: 19px;
+            color: var(--muted)
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            align-items: stretch
+        }
+
+        .step {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            text-align: center;
+            min-height: 145px
+        }
+
+        .step small {
+            color: var(--accent);
+            font-weight: 800
+        }
+
+        .step h3 {
+            margin: 9px 0;
+            font-size: 1rem
+        }
+
+        .compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px
+        }
+
+        .compare .box {
+            padding: 35px;
+            border-radius: var(--radius);
+            background: var(--dark);
+            color: #fff
+        }
+
+        .compare .box:nth-child(2) {
+            background: #dfe7e1;
+            color: var(--ink)
+        }
+
+        .compare .box:nth-child(3) {
+            background: #d9a441;
+            color: var(--ink)
+        }
+
+        .box h3 {
+            margin-bottom: 10px
+        }
+
+        .box p {
+            opacity: .82
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .benefit {
+            padding: 25px;
+            background: var(--surface);
+            border-radius: 18px;
+            border: 1px solid var(--line)
+        }
+
+        .benefit h3 {
+            margin-bottom: 7px
+        }
+
+        .benefit p {
+            color: var(--muted)
+        }
+
+        .packages {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px
+        }
+
+        .package {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 32px
+        }
+
+        .package.featured {
+            border: 2px solid var(--accent)
+        }
+
+        .package h3 {
+            font-size: 1.6rem
+        }
+
+        .package p {
+            color: var(--muted);
+            margin: 7px 0 18px
+        }
+
+        .package ul {
+            padding-left: 20px;
+            color: var(--muted)
+        }
+
+        .faq {
+            max-width: 850px
+        }
+
+        .faq-item {
+            border-top: 1px solid var(--line);
+            padding: 20px 0
+        }
+
+        .faq-q {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 800
+        }
+
+        .faq-a {
+            display: none;
+            color: var(--muted);
+            padding-top: 10px
+        }
+
+        .faq-item.open .faq-a {
+            display: block
+        }
+
+        .contact {
+            background: var(--dark);
+            color: #fff
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .85fr 1.15fr;
+            gap: 55px
+        }
+
+        .contact p {
+            color: #b9c5bf
+        }
+
+        .contact-info {
+            margin-top: 28px;
+            display: grid;
+            gap: 12px
+        }
+
+        .contact-info a {
+            color: white;
+            font-weight: 700
+        }
+
+        form {
+            background: #fff;
+            color: var(--ink);
+            border-radius: var(--radius);
+            padding: 30px;
+            display: grid;
+            gap: 14px
+        }
+
+        label {
+            font-weight: 800;
+            font-size: .88rem
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 13px;
+            font: inherit;
+            background: #fbfbf8
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical
+        }
+
+        footer {
+            background: #0b1714;
+            color: #9eaca6;
+            padding: 25px 0;
+            font-size: .85rem
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: .65s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none
+        }
+
+        @media(max-width:850px) {
+            .nav-links {
+                display: none
+            }
+
+            .menu {
+                display: block
+            }
+
+            .hero-grid,
+            .contact-grid {
+                grid-template-columns: 1fr
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .timeline {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .compare,
+            .benefits,
+            .stakeholders,
+            .packages {
+                grid-template-columns: 1fr
+            }
+
+            section {
+                padding: 70px 0
+            }
+
+            .hero {
+                padding: 75px 0
+            }
+        }
+
+        @media(max-width:520px) {
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .timeline {
+                grid-template-columns: 1fr
+            }
+
+            h1 {
+                font-size: 3.1rem
+            }
+
+            .footer-inner {
+                flex-direction: column
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-inner">
+            <a class="logo" href="#top">AJ<span>3D</span> | Progress Monitoring</a>
+            <div class="nav-links">
+                <a href="#services">Services</a><a href="#sectors">Fit-Outs</a><a href="#process">Process</a><a
+                    href="#faq">FAQ</a><a href="#contact">Contact</a>
+            </div>
+            <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="container hero-grid">
+            <div class="reveal">
+                <div class="eyebrow">Independent visual documentation</div>
+                <h1>See what’s built. Compare what’s planned.</h1>
+                <p class="lead">Time-stamped, measurable digital records for residential and commercial interior fit-out
+                    projects — from site capture to progress comparison.</p>
+                <div class="ctas">
+                    <a class="btn primary" href="#contact">Request a Project Assessment</a>
+                    <a class="btn secondary" href="#process">See How It Works</a>
+                </div>
+            </div>
+            <div class="hero-card reveal">
+                <h3>One continuous visual record.</h3>
+                <div class="stat"><strong>360° Capture</strong><span>Current site condition</span></div>
+                <div class="stat"><strong>Virtual Tour</strong><span>Remote site access</span></div>
+                <div class="stat"><strong>Point Cloud</strong><span>Spatial documentation</span></div>
+                <div class="stat"><strong>3D / BIM</strong><span>Planned vs executed</span></div>
+                <div class="stat"><strong>Progress Report</strong><span>Clear visual evidence</span></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="eyebrow">What we do</div>
+                <h2>From site capture to project insight.</h2>
+                <p>Build a structured visual history of your project instead of relying on scattered photographs,
+                    messages and changing document versions.</p>
+            </div>
+            <div class="cards">
+                <article class="card reveal"><span class="number">01 — CAPTURE</span>
+                    <h3>Capture</h3>
+                    <p>Digitally capture your project at regular intervals using 360° visual documentation.</p>
+                    <ul>
+                        <li>Walls & finishes</li>
+                        <li>Fixtures & services</li>
+                        <li>Installations & spaces</li>
+                    </ul>
+                </article>
+                <article class="card reveal"><span class="number">02 — DOCUMENT</span>
+                    <h3>Document</h3>
+                    <p>Turn each capture into a time-stamped digital record accessible remotely.</p>
+                    <ul>
+                        <li>Interactive virtual tour</li>
+                        <li>Spatial documentation</li>
+                        <li>Searchable project history</li>
+                    </ul>
+                </article>
+                <article class="card reveal"><span class="number">03 — COMPARE</span>
+                    <h3>Compare</h3>
+                    <p>Compare the current site with previous captures and, where available, the planned design.</p>
+                    <ul>
+                        <li>Previous → Current</li>
+                        <li>As Planned → As Executed</li>
+                        <li>Visible changes</li>
+                    </ul>
+                </article>
+                <article class="card reveal"><span class="number">04 — REPORT</span>
+                    <h3>Report</h3>
+                    <p>Receive a clear visual progress package that can be shared across the project team.</p>
+                    <ul>
+                        <li>Progress evidence</li>
+                        <li>Stakeholder reporting</li>
+                        <li>Project records</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt" id="sectors">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="eyebrow">Built for fit-outs</div>
+                <h2>Residential & commercial interiors.</h2>
+                <p>Designed around the needs of fast-moving projects, multiple trades and stakeholders who need a
+                    consistent visual reference.</p>
+            </div>
+            <div class="stakeholders">
+                <article class="stake reveal">
+                    <h3>Residential Interior Fit-Outs</h3>
+                    <p>From apartments and homes to high-end renovations and multi-residential interiors.</p>
+                    <ul>
+                        <li>Owners — remote visibility and milestone records</li>
+                        <li>Architects & designers — design-to-site comparison</li>
+                        <li>Builders — objective progress evidence</li>
+                        <li>Estimators, procurement & accounts — visual support for progress and commercial discussions
+                        </li>
+                    </ul>
+                </article>
+                <article class="stake reveal">
+                    <h3>Commercial Interior Fit-Outs</h3>
+                    <p>For offices, retail, hospitality and other commercial interiors with changing layouts and
+                        multiple trades.</p>
+                    <ul>
+                        <li>Owners & developers — consistent project visibility</li>
+                        <li>Architects & designers — execution against design intent</li>
+                        <li>Builders & turnkey contractors — shared visual truth</li>
+                        <li>Estimators, procurement & commercial teams — progress and installation evidence</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="eyebrow">The project timeline</div>
+                <h2>One project. One visual timeline.</h2>
+                <p>Move from existing condition through construction to a final digital record.</p>
+            </div>
+            <div class="timeline">
+                <div class="step reveal"><small>WEEK 01</small>
+                    <h3>Baseline Capture</h3>
+                    <p>Existing condition</p>
+                </div>
+                <div class="step reveal"><small>WEEK 03</small>
+                    <h3>Progress Capture</h3>
+                    <p>Current vs previous</p>
+                </div>
+                <div class="step reveal"><small>WEEK 05</small>
+                    <h3>Progress Capture</h3>
+                    <p>Current vs previous</p>
+                </div>
+                <div class="step reveal"><small>WEEK 07</small>
+                    <h3>Progress Capture</h3>
+                    <p>Current vs previous</p>
+                </div>
+                <div class="step reveal"><small>COMPLETION</small>
+                    <h3>Final Digital Record</h3>
+                    <p>Construction → completion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="eyebrow">Planned vs executed</div>
+                <h2>Don’t just ask whether it’s progressing. See whether it’s progressing as planned.</h2>
+                <p>Where drawings, 3D models or BIM data are available, captured site conditions can be compared with
+                    the planned design.</p>
+            </div>
+            <div class="compare">
+                <div class="box reveal">
+                    <h3>AS PLANNED</h3>
+                    <p>Your design / BIM / 3D model</p>
+                </div>
+                <div class="box reveal">
+                    <h3>AS EXECUTED</h3>
+                    <p>Your captured site</p>
+                </div>
+                <div class="box reveal">
+                    <h3>COMPARISON</h3>
+                    <p>Visualise differences, progress and areas requiring attention.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="eyebrow">Why progress monitoring?</div>
+                <h2>Less uncertainty. Better visibility.</h2>
+            </div>
+            <div class="benefits">
+                <div class="benefit reveal">
+                    <h3>Reduce uncertainty</h3>
+                    <p>Know what has changed since the last visit.</p>
+                </div>
+                <div class="benefit reveal">
+                    <h3>Improve communication</h3>
+                    <p>Give everyone a shared visual reference.</p>
+                </div>
+                <div class="benefit reveal">
+                    <h3>Catch issues earlier</h3>
+                    <p>Identify visible differences and incomplete areas sooner.</p>
+                </div>
+                <div class="benefit reveal">
+                    <h3>Reduce site visits</h3>
+                    <p>Review documented site conditions remotely when an in-person visit isn't necessary.</p>
+                </div>
+                <div class="benefit reveal">
+                    <h3>Protect project records</h3>
+                    <p>Maintain a chronological visual record from start to completion.</p>
+                </div>
+                <div class="benefit reveal">
+                    <h3>Support commercial decisions</h3>
+                    <p>Use visual evidence alongside schedules, claims, procurement and cost information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="alt">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="eyebrow">Monitoring options</div>
+                <h2>Designed around your project.</h2>
+            </div>
+            <div class="packages">
+                <article class="package featured reveal">
+                    <h3>Weekly Monitoring</h3>
+                    <p>For fast-moving projects where frequent visibility matters.</p><strong>Ideal for</strong>
+                    <ul>
+                        <li>Commercial fit-outs</li>
+                        <li>High-value residential interiors</li>
+                        <li>Projects with multiple trades</li>
+                        <li>Fast construction programs</li>
+                    </ul><br><strong>Typical output</strong>
+                    <ul>
+                        <li>360° site capture</li>
+                        <li>Interactive virtual tour</li>
+                        <li>Point cloud</li>
+                        <li>Progress comparison</li>
+                        <li>Visual documentation</li>
+                    </ul>
+                </article>
+                <article class="package reveal">
+                    <h3>Fortnightly Monitoring</h3>
+                    <p>A cost-effective option for projects that don't require weekly documentation.</p><strong>Ideal
+                        for</strong>
+                    <ul>
+                        <li>Residential renovations</li>
+                        <li>Apartment fit-outs</li>
+                        <li>Commercial interiors</li>
+                        <li>Longer construction programs</li>
+                    </ul><br><strong>Typical output</strong>
+                    <ul>
+                        <li>360° site capture</li>
+                        <li>Interactive virtual tour</li>
+                        <li>Point cloud</li>
+                        <li>Current vs previous comparison</li>
+                        <li>Progress documentation</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="eyebrow">Frequently asked questions</div>
+                <h2>Good to know.</h2>
+            </div>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-q">How often should a project be scanned?<span>+</span></div>
+                    <div class="faq-a">Weekly or fortnightly monitoring is generally suitable for active fit-out
+                        projects. The ideal frequency depends on the construction program, project size and the level of
+                        visibility required.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How large can a project be?<span>+</span></div>
+                    <div class="faq-a">Projects up to approximately 25,000 sq ft can be offered under the standard
+                        package, with larger projects quoted according to site size and complexity.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What do I receive after each capture?<span>+</span></div>
+                    <div class="faq-a">Depending on the selected package, deliverables can include an interactive
+                        virtual tour, point cloud, visual progress comparison, 3D/BIM comparison and a project progress
+                        report.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Can you compare my BIM or 3D model with the site?<span>+</span></div>
+                    <div class="faq-a">Yes. Where suitable BIM/3D model information is provided, the captured site can
+                        be compared with the planned model to support visualisation of planned versus executed
+                        conditions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Do you replace a building survey or inspection?<span>+</span></div>
+                    <div class="faq-a">No. This service is designed for visual documentation and construction progress
+                        monitoring. It does not replace a licensed surveyor, engineer, building inspector or other
+                        regulated professional where their services are required.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+            <div class="reveal">
+                <div class="eyebrow" style="color:#d9a441">Start a project</div>
+                <h2 style="font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.03;letter-spacing:-.05em">Your
+                    project.<br>Documented.</h2>
+                <p style="margin-top:18px">Tell us about your project and we'll recommend the most suitable
+                    documentation package.</p>
+                <div class="contact-info">
+                    <div>Contact: <a href="tel:+61424829919">Anushka Joshi</a></div>
+                    <div>Phone: <a href="tel:+61424829919">+61 424 829 919</a></div>
+                    <div>Email: <a href="mailto:AJ3Dvt@gmail.com">AJ3Dvt@gmail.com</a></div>
+                </div>
+            </div>
+            <form class="reveal" onsubmit="submitForm(event)">
+                <label for="name">Name</label><input id="name" name="name" required placeholder="Your name">
+                <label for="email">Email</label><input id="email" name="email" type="email" required
+                    placeholder="you@example.com">
+                <label for="type">Project Type</label><select id="type">
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Residential / Commercial</option>
+                </select>
+                <label for="size">Approx. Floor Area</label><input id="size" placeholder="e.g. 2,500 sq ft / 230 m²">
+                <label for="location">Project Location</label><input id="location" placeholder="Suburb / City">
+                <label for="stage">Construction Stage</label><select id="stage">
+                    <option>Pre-construction</option>
+                    <option>Fit-out</option>
+                    <option>Finishing</option>
+                    <option>Near completion</option>
+                </select>
+                <label for="frequency">Monitoring Frequency</label><select id="frequency">
+                    <option>Weekly</option>
+                    <option>Fortnightly</option>
+                    <option>Unsure</option>
+                </select>
+                <label for="message">Project details</label><textarea id="message"
+                    placeholder="Tell me a little about the project..."></textarea>
+                <button class="btn primary" type="submit">Request a Quote</button>
+                <small id="form-status" style="color:#64706b"></small>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>© <span id="year"></span> AJ3D | Construction Progress Monitoring</div>
+            <div>Capture · Compare · Understand · Report</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.nav-links');
+            links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+            if (links.style.display === 'flex') { links.style.position = 'absolute'; links.style.top = '76px'; links.style.left = '0'; links.style.right = '0'; links.style.background = 'rgba(245,242,235,.98)'; links.style.padding = '20px'; links.style.flexDirection = 'column'; links.style.borderBottom = '1px solid #d9ddd7' }
+        }
+        document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => q.parentElement.classList.toggle('open')));
+        const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible') }), { threshold: .08 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.getElementById('year').textContent = new Date().getFullYear();
+        function submitForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const type = document.getElementById('type').value;
+            const details = document.getElementById('message').value;
+            const subject = encodeURIComponent('Project Assessment Request — ' + type);
+            const body = encodeURIComponent(
+                'Name: ' + name + '\nEmail: ' + email + '\nProject Type: ' + type +
+                '\nFloor Area: ' + document.getElementById('size').value +
+                '\nLocation: ' + document.getElementById('location').value +
+                '\nConstruction Stage: ' + document.getElementById('stage').value +
+                '\nMonitoring Frequency: ' + document.getElementById('frequency').value +
+                '\n\nProject Details:\n' + details
+            );
+            window.location.href = 'mailto:AJ3Dvt@gmail.com?subject=' + subject + '&body=' + body;
+            document.getElementById('form-status').textContent = 'Opening your email app to send the enquiry…';
+        }
+    </script>
+</body>
+
+</html>
