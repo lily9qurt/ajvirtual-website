@@ -1,370 +1,4631 @@
-<form
-  action="https://formspree.io/f/xrpeqrkn"
-  method="POST"
-  id="contact-form"
-  accept-charset="UTF-8"
->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-  <!-- Formspree settings -->
-  <input type="hidden" name="_subject" value="New AJ Virtual Project Enquiry">
-
-  <!-- Anti-spam honeypot -->
-  <input
-    type="text"
-    name="_gotcha"
-    tabindex="-1"
-    autocomplete="off"
-    style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- NAME + COMPANY -->
-  <div class="form-grid">
-
-    <div class="form-group">
-      <label for="full-name">
-        Full Name <span>*</span>
-      </label>
-
-      <input
-        type="text"
-        id="full-name"
-        name="name"
-        placeholder="Your full name"
-        autocomplete="name"
-        required
-      >
-    </div>
-
-    <div class="form-group">
-      <label for="company">
-        Company
-      </label>
-
-      <input
-        type="text"
-        id="company"
-        name="company"
-        placeholder="Company name"
-        autocomplete="organization"
-      >
-    </div>
-
-  </div>
-
-
-  <!-- EMAIL + PHONE -->
-  <div class="form-grid">
-
-    <div class="form-group">
-      <label for="email">
-        Email <span>*</span>
-      </label>
-
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="you@company.com"
-        autocomplete="email"
-        required
-      >
-    </div>
-
-    <div class="form-group">
-      <label for="phone">
-        Phone
-      </label>
-
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="+61 ..."
-        autocomplete="tel"
-      >
-    </div>
-
-  </div>
-
-
-  <!-- PROJECT TYPE + SIZE -->
-  <div class="form-grid">
-
-    <div class="form-group">
-      <label for="project-type">
-        Project Type
-      </label>
-
-      <select
-        id="project-type"
-        name="project_type"
-      >
-        <option value="Residential Fit-Out">
-          Residential Fit-Out
-        </option>
-
-        <option value="Commercial Fit-Out">
-          Commercial Fit-Out
-        </option>
-
-        <option value="Renovation / Refurbishment">
-          Renovation / Refurbishment
-        </option>
-
-        <option value="Retail">
-          Retail
-        </option>
-
-        <option value="Office">
-          Office
-        </option>
-
-        <option value="Hospitality">
-          Hospitality
-        </option>
-
-        <option value="Other">
-          Other
-        </option>
-      </select>
-    </div>
-
-
-    <div class="form-group">
-      <label for="project-size">
-        Approx. Project Size
-      </label>
-
-      <input
-        type="text"
-        id="project-size"
-        name="project_size"
-        placeholder="e.g. 15,000 sq ft"
-      >
-    </div>
-
-  </div>
-
-
-  <!-- LOCATION + STAGE -->
-  <div class="form-grid">
-
-    <div class="form-group">
-      <label for="project-location">
-        Project Location
-      </label>
-
-      <input
-        type="text"
-        id="project-location"
-        name="project_location"
-        placeholder="Melbourne, VIC"
-      >
-    </div>
-
-
-    <div class="form-group">
-      <label for="construction-stage">
-        Construction Stage
-      </label>
-
-      <select
-        id="construction-stage"
-        name="construction_stage"
-      >
-        <option value="Pre-construction">
-          Pre-construction
-        </option>
-
-        <option value="Early construction">
-          Early construction
-        </option>
-
-        <option value="Interior fit-out">
-          Interior fit-out
-        </option>
-
-        <option value="Finishing stage">
-          Finishing stage
-        </option>
-
-        <option value="Near completion">
-          Near completion
-        </option>
-
-        <option value="Completed">
-          Completed
-        </option>
-
-        <option value="Other">
-          Other
-        </option>
-      </select>
-    </div>
-
-  </div>
-
-
-  <!-- FREQUENCY -->
-  <div class="form-group full-width">
-
-    <label for="monitoring-frequency">
-      Preferred Monitoring Frequency
-    </label>
-
-    <select
-      id="monitoring-frequency"
-      name="monitoring_frequency"
-    >
-      <option value="Weekly">
-        Weekly
-      </option>
-
-      <option value="Fortnightly">
-        Fortnightly
-      </option>
-
-      <option value="One-off">
-        One-off
-      </option>
-
-      <option value="Not sure">
-        Not sure
-      </option>
-    </select>
-
-  </div>
-
-
-  <!-- SERVICES -->
-  <div class="form-group full-width">
-
-    <label>
-      Services you're interested in
-    </label>
-
-    <div class="checkbox-grid">
-
-      <label class="checkbox-item">
-        <input
-          type="checkbox"
-          name="services[]"
-          value="360 Virtual Tour"
-        >
-        <span>360° Virtual Tour</span>
-      </label>
-
-
-      <label class="checkbox-item">
-        <input
-          type="checkbox"
-          name="services[]"
-          value="3D Point Cloud"
-        >
-        <span>3D Point Cloud</span>
-      </label>
-
-
-      <label class="checkbox-item">
-        <input
-          type="checkbox"
-          name="services[]"
-          value="Progress Monitoring"
-        >
-        <span>Progress Monitoring</span>
-      </label>
-
-
-      <label class="checkbox-item">
-        <input
-          type="checkbox"
-          name="services[]"
-          value="BIM Comparison"
-        >
-        <span>BIM Comparison</span>
-      </label>
-
-
-      <label class="checkbox-item">
-        <input
-          type="checkbox"
-          name="services[]"
-          value="Progress Reporting"
-        >
-        <span>Progress Reporting</span>
-      </label>
-
-
-      <label class="checkbox-item">
-        <input
-          type="checkbox"
-          name="services[]"
-          value="As-Built Documentation"
-        >
-        <span>As-Built Documentation</span>
-      </label>
-
-    </div>
-
-  </div>
-
-
-  <!-- BIM INFORMATION -->
-  <div class="form-group full-width">
-
-    <label for="bim-information">
-      Do you have drawings / BIM / 3D model information?
-    </label>
-
-    <select
-      id="bim-information"
-      name="bim_information"
-    >
-      <option value="Yes">
-        Yes
-      </option>
-
-      <option value="No">
-        No
-      </option>
-
-      <option value="Not sure">
-        Not sure
-      </option>
-    </select>
-
-  </div>
-
-
-  <!-- PROJECT DETAILS -->
-  <div class="form-group full-width">
-
-    <label for="project-details">
-      Project Details
-    </label>
-
-    <textarea
-      id="project-details"
-      name="message"
-      rows="7"
-      placeholder="Tell us about your project, what you need captured, your current stage, and what you would like to compare or monitor."
-    ></textarea>
-
-  </div>
-
-
-  <!-- SUBMIT -->
-  <button
-    type="submit"
-    class="form-submit"
-    id="submit-button"
+  <meta
+    name="description"
+    content="AJ Virtual provides construction progress monitoring, 360° virtual tours, 3D point clouds, visual documentation and BIM comparison for residential and commercial fit-outs across Melbourne."
   >
-    Request My Project Assessment
-  </button>
+
+  <meta
+    name="keywords"
+    content="construction progress monitoring Melbourne, 360 construction scan Melbourne, virtual tour construction, point cloud Melbourne, BIM comparison, construction documentation"
+  >
+
+  <meta name="author" content="AJ Virtual">
+
+  <title>AJ Virtual | Construction Progress Monitoring</title>
+
+  <style>
+
+    /* =========================================================
+       AJ VIRTUAL
+       COMPLETE WEBSITE STYLES
+       ========================================================= */
+
+    :root {
+      --cream: #f5f2eb;
+      --cream-light: #fbfaf7;
+      --white: #ffffff;
+
+      --green: #23483f;
+      --green-dark: #10211d;
+      --green-light: #315e52;
+
+      --gold: #d9a441;
+      --gold-light: #ead08a;
+
+      --text: #14231f;
+      --muted: #68746f;
+
+      --border: #d9ddd8;
+
+      --shadow:
+        0 18px 50px rgba(16, 33, 29, 0.08);
+
+      --radius: 22px;
+      --radius-small: 12px;
+
+      --max-width: 1180px;
+    }
 
 
-  <p class="form-note">
-    Your enquiry will be securely submitted through our online enquiry form.
-  </p>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-</form>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      background: var(--cream);
+      color: var(--text);
+
+      line-height: 1.6;
+
+      overflow-x: hidden;
+    }
+
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+
+    .container {
+      width: min(
+        calc(100% - 40px),
+        var(--max-width)
+      );
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+
+      z-index: 1000;
+
+      background: rgba(245, 242, 235, 0.95);
+
+      backdrop-filter: blur(14px);
+
+      border-bottom:
+        1px solid rgba(35, 72, 63, 0.08);
+    }
+
+
+    .nav {
+      min-height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      gap: 11px;
+
+      font-weight: 900;
+
+      font-size: 22px;
+
+      color: var(--green-dark);
+
+      letter-spacing: -0.5px;
+    }
+
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+
+      border-radius: 10px;
+
+      background: var(--green);
+
+      display: grid;
+      place-items: center;
+
+      color: white;
+
+      font-weight: 900;
+    }
+
+
+    .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      gap: 26px;
+
+      font-size: 14px;
+
+      color: #61706a;
+    }
+
+
+    .nav-links a {
+      transition: 0.2s ease;
+    }
+
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+
+    .nav-cta {
+      background: var(--green);
+
+      color: white !important;
+
+      padding: 13px 20px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+    }
+
+
+    .nav-cta:hover {
+      background: var(--green-dark);
+
+      transform: translateY(-1px);
+    }
+
+
+    .mobile-menu {
+      display: none;
+
+      border: none;
+
+      background: transparent;
+
+      font-size: 28px;
+
+      cursor: pointer;
+
+      color: var(--green-dark);
+    }
+
+
+    /* =========================================================
+       BUTTONS
+       ========================================================= */
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 15px 23px;
+
+      border-radius: 999px;
+
+      border: 2px solid transparent;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+
+    .btn-primary {
+      background: var(--green);
+
+      color: white;
+    }
+
+
+    .btn-primary:hover {
+      background: var(--green-dark);
+    }
+
+
+    .btn-secondary {
+      border-color: var(--green);
+
+      color: var(--green);
+
+      background: transparent;
+    }
+
+
+    .btn-secondary:hover {
+      background: var(--green);
+
+      color: white;
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      padding: 95px 0 80px;
+
+      background:
+        radial-gradient(
+          circle at 80% 15%,
+          rgba(217, 164, 65, 0.14),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(35, 72, 63, 0.08),
+          transparent 30%
+        );
+    }
+
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.05fr
+        0.95fr;
+
+      align-items: center;
+
+      gap: 65px;
+    }
+
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--green);
+
+      font-weight: 900;
+
+      font-size: 13px;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 18px;
+    }
+
+
+    .eyebrow::before {
+      content: "";
+
+      width: 28px;
+      height: 3px;
+
+      background: var(--gold);
+
+      border-radius: 20px;
+    }
+
+
+    .hero h1 {
+      font-size:
+        clamp(48px, 6vw, 78px);
+
+      line-height: 0.98;
+
+      letter-spacing: -4px;
+
+      color: var(--green-dark);
+
+      margin-bottom: 25px;
+    }
+
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
+
+    .hero p {
+      max-width: 650px;
+
+      color: var(--muted);
+
+      font-size: 19px;
+
+      margin-bottom: 30px;
+    }
+
+
+    .hero-buttons {
+      display: flex;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .hero-note {
+      margin-top: 24px;
+
+      font-size: 13px;
+
+      color: var(--muted);
+    }
+
+
+    .hero-visual {
+      min-height: 500px;
+
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(16, 33, 29, 0.96),
+          rgba(35, 72, 63, 0.88)
+        );
+
+      position: relative;
+
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .hero-visual::before {
+      content: "";
+
+      position: absolute;
+
+      width: 420px;
+      height: 420px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(255,255,255,0.18);
+
+      top: -120px;
+      right: -100px;
+    }
+
+
+    .hero-visual::after {
+      content: "";
+
+      position: absolute;
+
+      width: 250px;
+      height: 250px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(217, 164, 65, 0.16);
+
+      bottom: -100px;
+      left: -80px;
+
+      filter: blur(5px);
+    }
+
+
+    .visual-content {
+      position: absolute;
+
+      inset: 30px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      color: white;
+
+      z-index: 2;
+    }
+
+
+    .visual-top {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+
+    .visual-badge {
+      background:
+        rgba(255,255,255,0.12);
+
+      border:
+        1px solid rgba(255,255,255,0.18);
+
+      padding: 9px 13px;
+
+      border-radius: 999px;
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+
+    .visual-center {
+      text-align: center;
+    }
+
+
+    .scan-ring {
+      width: 220px;
+      height: 220px;
+
+      border:
+        1px solid rgba(255,255,255,0.28);
+
+      border-radius: 50%;
+
+      margin: 0 auto 30px;
+
+      display: grid;
+
+      place-items: center;
+
+      position: relative;
+    }
+
+
+    .scan-ring::before,
+    .scan-ring::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(217, 164, 65, 0.65);
+    }
+
+
+    .scan-ring::before {
+      inset: 25px;
+    }
+
+
+    .scan-ring::after {
+      inset: 55px;
+    }
+
+
+    .scan-center {
+      width: 65px;
+      height: 65px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--green-dark);
+
+      font-size: 22px;
+
+      font-weight: 900;
+    }
+
+
+    .visual-center h3 {
+      font-size: 27px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .visual-center p {
+      color: rgba(255,255,255,0.68);
+
+      font-size: 14px;
+    }
+
+
+    .visual-bottom {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 10px;
+    }
+
+
+    .visual-stat {
+      background:
+        rgba(255,255,255,0.08);
+
+      border:
+        1px solid rgba(255,255,255,0.12);
+
+      border-radius: 14px;
+
+      padding: 14px;
+    }
+
+
+    .visual-stat strong {
+      display: block;
+
+      font-size: 17px;
+    }
+
+
+    .visual-stat small {
+      color: rgba(255,255,255,0.58);
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================================
+       SECTION BASICS
+       ========================================================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+
+    .section-light {
+      background: var(--cream-light);
+    }
+
+
+    .section-dark {
+      background: var(--green-dark);
+
+      color: white;
+    }
+
+
+    .section-header {
+      max-width: 760px;
+
+      margin-bottom: 50px;
+    }
+
+
+    .section-header.center {
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+    }
+
+
+    .section-header h2 {
+      font-size:
+        clamp(34px, 4vw, 54px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+
+      color: var(--green-dark);
+
+      margin-bottom: 18px;
+    }
+
+
+    .section-dark .section-header h2 {
+      color: white;
+    }
+
+
+    .section-header p {
+      color: var(--muted);
+
+      font-size: 17px;
+    }
+
+
+    .section-dark .section-header p {
+      color: rgba(255,255,255,0.68);
+    }
+
+
+    /* =========================================================
+       SERVICES
+       ========================================================= */
+
+    .services-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .service-card {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      padding: 30px;
+
+      box-shadow:
+        0 8px 30px rgba(16,33,29,0.04);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .service-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 14px;
+
+      background: rgba(35,72,63,0.09);
+
+      color: var(--green);
+
+      font-weight: 900;
+
+      margin-bottom: 22px;
+    }
+
+
+    .service-card h3 {
+      font-size: 21px;
+
+      margin-bottom: 10px;
+
+      color: var(--green-dark);
+    }
+
+
+    .service-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       PROCESS
+       ========================================================= */
+
+    .process-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .process-card {
+      position: relative;
+
+      padding: 30px;
+
+      border-radius: var(--radius);
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+    }
+
+
+    .process-number {
+      font-size: 42px;
+
+      font-weight: 900;
+
+      color: var(--gold);
+
+      line-height: 1;
+
+      margin-bottom: 25px;
+    }
+
+
+    .process-card h3 {
+      color: var(--green-dark);
+
+      margin-bottom: 10px;
+    }
+
+
+    .process-card p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       OUTPUTS
+       ========================================================= */
+
+    .outputs-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .output-card {
+      min-height: 240px;
+
+      border-radius: var(--radius);
+
+      padding: 28px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--green),
+          var(--green-dark)
+        );
+
+      color: white;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+
+    .output-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(255,255,255,0.14);
+
+      top: -70px;
+      right: -50px;
+    }
+
+
+    .output-card > * {
+      position: relative;
+
+      z-index: 2;
+    }
+
+
+    .output-number {
+      position: absolute;
+
+      top: 25px;
+      left: 28px;
+
+      color: rgba(255,255,255,0.45);
+
+      font-weight: 900;
+    }
+
+
+    .output-card h3 {
+      font-size: 22px;
+
+      margin-bottom: 7px;
+    }
+
+
+    .output-card p {
+      color: rgba(255,255,255,0.68);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       FEATURE / COMPARISON
+       ========================================================= */
+
+    .feature-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+
+    .comparison-box {
+      min-height: 440px;
+
+      border-radius: 28px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #dce4df,
+          #aab9b2
+        );
+
+      position: relative;
+
+      overflow: hidden;
+
+      display: grid;
+
+      place-items: center;
+    }
+
+
+    .comparison-grid {
+      width: 86%;
+      height: 72%;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 3px;
+
+      background: var(--green-dark);
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .comparison-side {
+      display: flex;
+
+      align-items: flex-end;
+
+      padding: 20px;
+
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,0.12) 0px,
+          rgba(255,255,255,0.12) 1px,
+          transparent 1px,
+          transparent 28px
+        ),
+        linear-gradient(
+          145deg,
+          #59756b,
+          #27483f
+        );
+
+      color: white;
+    }
+
+
+    .comparison-side:last-child {
+      background:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,0.10) 0px,
+          rgba(255,255,255,0.10) 1px,
+          transparent 1px,
+          transparent 25px
+        ),
+        linear-gradient(
+          145deg,
+          #7f8e87,
+          #405b52
+        );
+    }
+
+
+    .comparison-label {
+      background:
+        rgba(16,33,29,0.75);
+
+      padding: 7px 10px;
+
+      border-radius: 8px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+
+    .feature-copy h2 {
+      font-size:
+        clamp(34px, 4vw, 53px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 20px;
+
+      color: var(--green-dark);
+    }
+
+
+    .feature-copy > p {
+      color: var(--muted);
+
+      margin-bottom: 25px;
+    }
+
+
+    .check-list {
+      list-style: none;
+
+      display: grid;
+
+      gap: 13px;
+    }
+
+
+    .check-list li {
+      display: flex;
+
+      gap: 12px;
+
+      color: #46534f;
+    }
+
+
+    .check {
+      flex: 0 0 auto;
+
+      width: 23px;
+      height: 23px;
+
+      border-radius: 50%;
+
+      background: var(--green);
+
+      color: white;
+
+      display: grid;
+
+      place-items: center;
+
+      font-size: 12px;
+
+      font-weight: 900;
+    }
+
+
+    /* =========================================================
+       SECTORS
+       ========================================================= */
+
+    .sector-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 20px;
+    }
+
+
+    .sector-card {
+      padding: 42px;
+
+      min-height: 340px;
+
+      border-radius: 28px;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+    }
+
+
+    .sector-tag {
+      color: var(--gold);
+
+      text-transform: uppercase;
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 12px;
+    }
+
+
+    .sector-card h3 {
+      font-size: 31px;
+
+      color: var(--green-dark);
+
+      margin-bottom: 12px;
+    }
+
+
+    .sector-card p {
+      color: var(--muted);
+
+      margin-bottom: 18px;
+    }
+
+
+    .sector-list {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      list-style: none;
+    }
+
+
+    .sector-list li {
+      background: var(--cream);
+
+      border-radius: 999px;
+
+      padding: 7px 11px;
+
+      font-size: 12px;
+
+      color: var(--green);
+    }
+
+
+    /* =========================================================
+       STAKEHOLDERS
+       ========================================================= */
+
+    .stakeholder-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 15px;
+    }
+
+
+    .stakeholder {
+      border:
+        1px solid rgba(255,255,255,0.13);
+
+      border-radius: 18px;
+
+      padding: 25px;
+
+      background:
+        rgba(255,255,255,0.045);
+    }
+
+
+    .stakeholder strong {
+      display: block;
+
+      font-size: 18px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .stakeholder span {
+      color: rgba(255,255,255,0.6);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       EXPERIENCE
+       ========================================================= */
+
+    .experience-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1.2fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+
+    .experience-stat {
+      background: var(--green);
+
+      color: white;
+
+      padding: 40px;
+
+      border-radius: 28px;
+    }
+
+
+    .experience-stat h3 {
+      font-size: 55px;
+
+      line-height: 1;
+
+      color: var(--gold-light);
+
+      margin-bottom: 10px;
+    }
+
+
+    .experience-stat p {
+      color: rgba(255,255,255,0.7);
+    }
+
+
+    .experience-copy h2 {
+      font-size:
+        clamp(34px, 4vw, 50px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+
+      color: var(--green-dark);
+
+      margin-bottom: 18px;
+    }
+
+
+    .experience-copy p {
+      color: var(--muted);
+
+      margin-bottom: 18px;
+    }
+
+
+    /* =========================================================
+       PROJECTS
+       ========================================================= */
+
+    .projects-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .project-card {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 24px;
+
+      overflow: hidden;
+    }
+
+
+    .project-image {
+      height: 220px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #294c42,
+          #899b93
+        );
+
+      display: grid;
+
+      place-items: center;
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.4px;
+
+      position: relative;
+    }
+
+
+    .project-image::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 25px;
+
+      border:
+        1px solid rgba(255,255,255,0.25);
+
+      border-radius: 15px;
+    }
+
+
+    .project-info {
+      padding: 25px;
+    }
+
+
+    .project-info small {
+      color: var(--gold);
+
+      text-transform: uppercase;
+
+      font-weight: 900;
+
+      font-size: 11px;
+
+      letter-spacing: 1px;
+    }
+
+
+    .project-info h3 {
+      color: var(--green-dark);
+
+      margin: 7px 0;
+    }
+
+
+    .project-info p {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       VIDEO SECTION
+       ========================================================= */
+
+    .video-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 20px;
+    }
+
+
+    .video-placeholder {
+      min-height: 300px;
+
+      border-radius: 25px;
+
+      background: var(--green-dark);
+
+      color: white;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+    }
+
+
+    .play-button {
+      width: 65px;
+      height: 65px;
+
+      border-radius: 50%;
+
+      background: var(--gold);
+
+      color: var(--green-dark);
+
+      display: grid;
+
+      place-items: center;
+
+      font-weight: 900;
+
+      margin-bottom: 18px;
+    }
+
+
+    .video-placeholder p {
+      color: rgba(255,255,255,0.6);
+
+      font-size: 14px;
+
+      max-width: 350px;
+
+      margin-top: 7px;
+    }
+
+
+    /* =========================================================
+       PACKAGES
+       ========================================================= */
+
+    .packages-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+
+      align-items: stretch;
+    }
+
+
+    .package {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 25px;
+
+      padding: 32px;
+
+      display: flex;
+
+      flex-direction: column;
+    }
+
+
+    .package.featured {
+      border:
+        2px solid var(--green);
+
+      box-shadow: var(--shadow);
+
+      transform: translateY(-7px);
+    }
+
+
+    .package-badge {
+      display: inline-flex;
+
+      align-self: flex-start;
+
+      background: var(--green);
+
+      color: white;
+
+      border-radius: 999px;
+
+      padding: 6px 10px;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      margin-bottom: 15px;
+    }
+
+
+    .package h3 {
+      font-size: 24px;
+
+      color: var(--green-dark);
+
+      margin-bottom: 8px;
+    }
+
+
+    .package-description {
+      color: var(--muted);
+
+      font-size: 14px;
+
+      min-height: 55px;
+
+      margin-bottom: 18px;
+    }
+
+
+    .price {
+      font-size: 31px;
+
+      color: var(--green);
+
+      font-weight: 900;
+
+      margin-bottom: 20px;
+    }
+
+
+    .price small {
+      font-size: 12px;
+
+      color: var(--muted);
+
+      font-weight: 500;
+    }
+
+
+    .package ul {
+      list-style: none;
+
+      display: grid;
+
+      gap: 11px;
+
+      margin-bottom: 25px;
+
+      flex: 1;
+    }
+
+
+    .package li {
+      font-size: 14px;
+
+      color: #52605b;
+
+      padding-left: 21px;
+
+      position: relative;
+    }
+
+
+    .package li::before {
+      content: "✓";
+
+      position: absolute;
+
+      left: 0;
+
+      color: var(--green);
+
+      font-weight: 900;
+    }
+
+
+    .package .btn {
+      width: 100%;
+    }
+
+
+    .pricing-note {
+      margin-top: 25px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+
+    .faq {
+      max-width: 850px;
+
+      margin: 0 auto;
+    }
+
+
+    .faq-item {
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .faq-question {
+      width: 100%;
+
+      background: transparent;
+
+      border: none;
+
+      padding: 23px 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      cursor: pointer;
+
+      text-align: left;
+
+      font-weight: 800;
+
+      color: var(--green-dark);
+    }
+
+
+    .faq-icon {
+      font-size: 22px;
+
+      color: var(--green);
+
+      transition: 0.2s ease;
+    }
+
+
+    .faq-answer {
+      display: none;
+
+      padding:
+        0 35px 22px 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+
+    .contact-section {
+      background: var(--green-dark);
+
+      color: white;
+    }
+
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.75fr 1.25fr;
+
+      gap: 55px;
+
+      align-items: start;
+    }
+
+
+    .contact-copy h2 {
+      font-size:
+        clamp(36px, 4vw, 55px);
+
+      line-height: 1.04;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 18px;
+    }
+
+
+    .contact-copy > p {
+      color: rgba(255,255,255,0.67);
+
+      margin-bottom: 28px;
+    }
+
+
+    .contact-points {
+      list-style: none;
+
+      display: grid;
+
+      gap: 13px;
+    }
+
+
+    .contact-points li {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      color: rgba(255,255,255,0.8);
+
+      font-size: 14px;
+    }
+
+
+    .contact-form {
+      background: white;
+
+      color: var(--text);
+
+      border-radius: 28px;
+
+      padding: 35px;
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.18);
+    }
+
+
+    .form-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 18px;
+
+      margin-bottom: 18px;
+    }
+
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+
+    .form-grid .form-group {
+      margin-bottom: 0;
+    }
+
+
+    .form-group label {
+      display: block;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      margin-bottom: 8px;
+
+      color: var(--green-dark);
+    }
+
+
+    .form-group label span {
+      color: #c23b3b;
+    }
+
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 15px 17px;
+
+      background: #fcfbf8;
+
+      color: var(--text);
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--green);
+
+      box-shadow:
+        0 0 0 4px rgba(35,72,63,0.08);
+    }
+
+
+    textarea {
+      resize: vertical;
+
+      min-height: 150px;
+    }
+
+
+    .full-width {
+      width: 100%;
+    }
+
+
+    .checkbox-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 11px;
+    }
+
+
+    .checkbox-item {
+      display: flex !important;
+
+      align-items: center;
+
+      gap: 9px;
+
+      font-weight: 500 !important;
+
+      color: #55635e !important;
+
+      cursor: pointer;
+    }
+
+
+    .checkbox-item input {
+      width: auto;
+
+      accent-color: var(--green);
+
+      cursor: pointer;
+    }
+
+
+    .form-submit {
+      width: 100%;
+
+      border: none;
+
+      background: var(--green);
+
+      color: white;
+
+      border-radius: 999px;
+
+      padding: 17px 20px;
+
+      font-weight: 900;
+
+      cursor: pointer;
+
+      margin-top: 5px;
+
+      transition: 0.2s ease;
+    }
+
+
+    .form-submit:hover {
+      background: var(--green-dark);
+
+      transform: translateY(-1px);
+    }
+
+
+    .form-note {
+      color: #78827e;
+
+      font-size: 12px;
+
+      margin-top: 15px;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       CTA
+       ========================================================= */
+
+    .final-cta {
+      padding: 90px 0;
+
+      background: var(--cream);
+    }
+
+
+    .cta-box {
+      border-radius: 30px;
+
+      background: var(--green);
+
+      color: white;
+
+      padding: 60px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 30px;
+    }
+
+
+    .cta-box h2 {
+      font-size:
+        clamp(32px, 4vw, 50px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 12px;
+    }
+
+
+    .cta-box p {
+      color: rgba(255,255,255,0.68);
+
+      max-width: 620px;
+    }
+
+
+    .cta-box .btn {
+      flex: 0 0 auto;
+
+      background: white;
+
+      color: var(--green);
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: var(--green-dark);
+
+      color: white;
+
+      padding: 50px 0 25px;
+    }
+
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.3fr 1fr 1fr;
+
+      gap: 50px;
+
+      padding-bottom: 40px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.12);
+    }
+
+
+    .footer-brand p {
+      color: rgba(255,255,255,0.55);
+
+      max-width: 420px;
+
+      margin-top: 14px;
+
+      font-size: 14px;
+    }
+
+
+    .footer-title {
+      font-weight: 900;
+
+      margin-bottom: 15px;
+    }
+
+
+    .footer-links {
+      list-style: none;
+
+      display: grid;
+
+      gap: 9px;
+    }
+
+
+    .footer-links li,
+    .footer-links a {
+      color: rgba(255,255,255,0.58);
+
+      font-size: 14px;
+    }
+
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+
+    .footer-bottom {
+      padding-top: 22px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: rgba(255,255,255,0.42);
+
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+
+        left: 20px;
+        right: 20px;
+
+        top: 75px;
+
+        background: white;
+
+        padding: 20px;
+
+        border-radius: 18px;
+
+        box-shadow: var(--shadow);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+      }
+
+
+      .nav-links.active {
+        display: flex;
+      }
+
+
+      .nav-links a {
+        padding: 12px;
+      }
+
+
+      .mobile-menu {
+        display: block;
+      }
+
+
+      .hero-grid,
+      .feature-grid,
+      .experience-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero {
+        padding-top: 65px;
+      }
+
+
+      .hero-visual {
+        min-height: 430px;
+      }
+
+
+      .services-grid,
+      .outputs-grid,
+      .projects-grid,
+      .packages-grid,
+      .stakeholder-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .process-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .cta-box {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 40px;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .container {
+        width:
+          min(
+            calc(100% - 28px),
+            var(--max-width)
+          );
+      }
+
+
+      section {
+        padding: 70px 0;
+      }
+
+
+      .hero h1 {
+        letter-spacing: -2.5px;
+
+        font-size: 47px;
+      }
+
+
+      .hero p {
+        font-size: 16px;
+      }
+
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+
+      .hero-visual {
+        min-height: 380px;
+      }
+
+
+      .scan-ring {
+        width: 175px;
+        height: 175px;
+      }
+
+
+      .visual-bottom {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+
+      .visual-stat {
+        padding: 10px;
+      }
+
+
+      .visual-stat strong {
+        font-size: 13px;
+      }
+
+
+      .visual-stat small {
+        font-size: 9px;
+      }
+
+
+      .services-grid,
+      .outputs-grid,
+      .process-grid,
+      .sector-grid,
+      .stakeholder-grid,
+      .projects-grid,
+      .video-grid,
+      .packages-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .package.featured {
+        transform: none;
+      }
+
+
+      .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+      }
+
+
+      .checkbox-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .contact-form {
+        padding: 22px;
+      }
+
+
+      .comparison-box {
+        min-height: 330px;
+      }
+
+
+      .cta-box {
+        padding: 32px 25px;
+      }
+
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       NAVIGATION
+       ======================================================= -->
+
+  <header class="site-header">
+
+    <div class="container nav">
+
+      <a
+        href="#top"
+        class="logo"
+      >
+        <span class="logo-mark">AJ</span>
+
+        <span>AJ Virtual</span>
+      </a>
+
+
+      <button
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <nav
+        class="nav-links"
+        id="nav-links"
+      >
+
+        <a href="#services">Services</a>
+
+        <a href="#process">Process</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#packages">Packages</a>
+
+        <a href="#faq">FAQ</a>
+
+        <a
+          href="#contact"
+          class="nav-cta"
+        >
+          Get a Quote
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main id="top">
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Construction Progress Monitoring
+          </div>
+
+
+          <h1>
+            See What's Built.
+            <span>Track What's Changing.</span>
+          </h1>
+
+
+          <p>
+            Weekly and fortnightly construction progress
+            monitoring and visual documentation for
+            residential and commercial interior fit-outs
+            across Melbourne.
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a
+              href="#contact"
+              class="btn btn-primary"
+            >
+              Request a Quote
+            </a>
+
+
+            <a
+              href="#process"
+              class="btn btn-secondary"
+            >
+              See How It Works
+            </a>
+
+          </div>
+
+
+          <div class="hero-note">
+            360° capture • Virtual tours • Point clouds •
+            Progress comparison • BIM comparison
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+          <div class="visual-content">
+
+            <div class="visual-top">
+
+              <div class="visual-badge">
+                MELBOURNE • AUSTRALIA
+              </div>
+
+              <div class="visual-badge">
+                DIGITAL SITE RECORD
+              </div>
+
+            </div>
+
+
+            <div class="visual-center">
+
+              <div class="scan-ring">
+
+                <div class="scan-center">
+                  360°
+                </div>
+
+              </div>
+
+
+              <h3>
+                One Capture.
+              </h3>
+
+              <p>
+                Multiple project outputs.
+              </p>
+
+            </div>
+
+
+            <div class="visual-bottom">
+
+              <div class="visual-stat">
+                <strong>360°</strong>
+                <small>Virtual Tour</small>
+              </div>
+
+              <div class="visual-stat">
+                <strong>3D</strong>
+                <small>Point Cloud</small>
+              </div>
+
+              <div class="visual-stat">
+                <strong>Time</strong>
+                <small>Progress Record</small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SERVICES
+         ===================================================== -->
+
+    <section
+      id="services"
+      class="section-light"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            What We Do
+          </div>
+
+          <h2>
+            Construction documentation
+            that gives your team visibility.
+          </h2>
+
+          <p>
+            Capture the real site, turn it into useful
+            digital information, and create a consistent
+            record of how the project changes over time.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              01
+            </div>
+
+            <h3>
+              360° Site Capture
+            </h3>
+
+            <p>
+              Capture an immersive record of the site so
+              project stakeholders can review spaces
+              remotely without relying entirely on
+              photographs or memory.
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              02
+            </div>
+
+            <h3>
+              Virtual Tours
+            </h3>
+
+            <p>
+              Create an accessible digital walkthrough
+              that provides a visual record of project
+              conditions at a specific point in time.
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              03
+            </div>
+
+            <h3>
+              3D Point Clouds
+            </h3>
+
+            <p>
+              Transform captured site information into
+              spatial digital data that can support
+              documentation and project review.
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              04
+            </div>
+
+            <h3>
+              Progress Monitoring
+            </h3>
+
+            <p>
+              Compare site captures across time to make
+              construction progress easier to review and
+              communicate.
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              05
+            </div>
+
+            <h3>
+              BIM / 3D Comparison
+            </h3>
+
+            <p>
+              Where suitable project models are available,
+              compare visual site information against
+              planned digital information.
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <div class="service-icon">
+              06
+            </div>
+
+            <h3>
+              Visual Reporting
+            </h3>
+
+            <p>
+              Turn site information into clear,
+              stakeholder-ready documentation for project
+              discussions and ongoing records.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROCESS
+         ===================================================== -->
+
+    <section id="process">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Our Process
+          </div>
+
+          <h2>
+            Capture. Compare.
+            Understand. Report.
+          </h2>
+
+          <p>
+            A simple workflow designed to turn physical
+            site conditions into a useful digital record.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <h3>
+              Capture
+            </h3>
+
+            <p>
+              We capture the project site using 360°
+              imaging to create a detailed visual record.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <h3>
+              Process
+            </h3>
+
+            <p>
+              The captured information is processed into
+              digital outputs such as virtual tours and
+              spatial data.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <h3>
+              Compare
+            </h3>
+
+            <p>
+              Previous and current captures can be
+              compared to make changes and progress
+              easier to identify.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              04
+            </div>
+
+            <h3>
+              Report
+            </h3>
+
+            <p>
+              Key information can be organised into
+              practical visual documentation for project
+              stakeholders.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUTPUTS
+         ===================================================== -->
+
+    <section class="section-dark">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Digital Outputs
+          </div>
+
+          <h2>
+            One site capture.
+            Multiple project outputs.
+          </h2>
+
+          <p>
+            The goal isn't simply to scan a building.
+            It's to create information that can be used
+            throughout the project.
+          </p>
+
+        </div>
+
+
+        <div class="outputs-grid">
+
+
+          <div class="output-card">
+
+            <span class="output-number">
+              01
+            </span>
+
+            <h3>
+              360° Virtual Tour
+            </h3>
+
+            <p>
+              Remotely review the captured project space.
+            </p>
+
+          </div>
+
+
+          <div class="output-card">
+
+            <span class="output-number">
+              02
+            </span>
+
+            <h3>
+              3D Point Cloud
+            </h3>
+
+            <p>
+              A spatial digital representation of the
+              captured environment.
+            </p>
+
+          </div>
+
+
+          <div class="output-card">
+
+            <span class="output-number">
+              03
+            </span>
+
+            <h3>
+              Progress Comparison
+            </h3>
+
+            <p>
+              Compare different site captures over time.
+            </p>
+
+          </div>
+
+
+          <div class="output-card">
+
+            <span class="output-number">
+              04
+            </span>
+
+            <h3>
+              Project Timeline
+            </h3>
+
+            <p>
+              Build a visual record of how the project
+              develops.
+            </p>
+
+          </div>
+
+
+          <div class="output-card">
+
+            <span class="output-number">
+              05
+            </span>
+
+            <h3>
+              BIM / 3D Comparison
+            </h3>
+
+            <p>
+              Compare captured conditions with available
+              digital project information.
+            </p>
+
+          </div>
+
+
+          <div class="output-card">
+
+            <span class="output-number">
+              06
+            </span>
+
+            <h3>
+              Visual Reporting
+            </h3>
+
+            <p>
+              Create clear project documentation for
+              stakeholder review.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COMPARISON
+         ===================================================== -->
+
+    <section>
+
+      <div class="container feature-grid">
+
+
+        <div class="comparison-box">
+
+          <div class="comparison-grid">
+
+            <div class="comparison-side">
+
+              <span class="comparison-label">
+                AS PLANNED
+              </span>
+
+            </div>
+
+
+            <div class="comparison-side">
+
+              <span class="comparison-label">
+                AS EXECUTED
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="feature-copy">
+
+          <div class="eyebrow">
+            Planned vs Executed
+          </div>
+
+          <h2>
+            What was planned?
+            What was actually built?
+          </h2>
+
+          <p>
+            Where drawings, 3D models or BIM information
+            are available, visual site capture can help
+            teams compare planned information with
+            observed site conditions.
+          </p>
+
+
+          <ul class="check-list">
+
+            <li>
+              <span class="check">✓</span>
+
+              <span>
+                Visual comparison between project stages
+              </span>
+            </li>
+
+
+            <li>
+              <span class="check">✓</span>
+
+              <span>
+                Easier remote review of site conditions
+              </span>
+            </li>
+
+
+            <li>
+              <span class="check">✓</span>
+
+              <span>
+                Better project documentation
+              </span>
+            </li>
+
+
+            <li>
+              <span class="check">✓</span>
+
+              <span>
+                Consistent visual project history
+              </span>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SECTORS
+         ===================================================== -->
+
+    <section class="section-light">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Projects We Support
+          </div>
+
+          <h2>
+            Built for fit-outs and refurbishment.
+          </h2>
+
+          <p>
+            Designed around the documentation needs of
+            projects where conditions change quickly and
+            stakeholders need visibility.
+          </p>
+
+        </div>
+
+
+        <div class="sector-grid">
+
+
+          <div class="sector-card">
+
+            <div class="sector-tag">
+              Residential
+            </div>
+
+            <h3>
+              Residential Interior Fit-Outs
+            </h3>
+
+            <p>
+              Visual documentation for renovations,
+              apartments, luxury interiors, refurbishment
+              and multi-residential projects.
+            </p>
+
+            <ul class="sector-list">
+
+              <li>Renovations</li>
+              <li>Apartments</li>
+              <li>Luxury Interiors</li>
+              <li>Refurbishment</li>
+              <li>Multi-residential</li>
+
+            </ul>
+
+          </div>
+
+
+          <div class="sector-card">
+
+            <div class="sector-tag">
+              Commercial
+            </div>
+
+            <h3>
+              Commercial Interior Fit-Outs
+            </h3>
+
+            <p>
+              Progress documentation for offices, retail,
+              hospitality, showrooms and commercial
+              refurbishment.
+            </p>
+
+            <ul class="sector-list">
+
+              <li>Offices</li>
+              <li>Retail</li>
+              <li>Hospitality</li>
+              <li>Showrooms</li>
+              <li>Tenancy Fit-Outs</li>
+
+            </ul>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STAKEHOLDERS
+         ===================================================== -->
+
+    <section class="section-dark">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Who Benefits
+          </div>
+
+          <h2>
+            One visual record.
+            Different value for every stakeholder.
+          </h2>
+
+        </div>
+
+
+        <div class="stakeholder-grid">
+
+
+          <div class="stakeholder">
+
+            <strong>
+              Owners & Developers
+            </strong>
+
+            <span>
+              Understand project progress without needing
+              to be on site for every review.
+            </span>
+
+          </div>
+
+
+          <div class="stakeholder">
+
+            <strong>
+              Architects & Designers
+            </strong>
+
+            <span>
+              Maintain a visual reference of changing site
+              conditions and completed work.
+            </span>
+
+          </div>
+
+
+          <div class="stakeholder">
+
+            <strong>
+              Builders & Contractors
+            </strong>
+
+            <span>
+              Create consistent documentation of project
+              progress throughout construction.
+            </span>
+
+          </div>
+
+
+          <div class="stakeholder">
+
+            <strong>
+              Project Managers
+            </strong>
+
+            <span>
+              Give project teams a shared visual reference
+              for progress discussions.
+            </span>
+
+          </div>
+
+
+          <div class="stakeholder">
+
+            <strong>
+              Commercial Teams
+            </strong>
+
+            <span>
+              Use visual records to support project review,
+              coordination and documentation.
+            </span>
+
+          </div>
+
+
+          <div class="stakeholder">
+
+            <strong>
+              Procurement Teams
+            </strong>
+
+            <span>
+              Improve visibility of site conditions when
+              coordinating materials and project activity.
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EXPERIENCE
+         ===================================================== -->
+
+    <section id="experience">
+
+      <div class="container experience-grid">
+
+
+        <div class="experience-stat">
+
+          <h3>
+            Digital
+          </h3>
+
+          <p>
+            AJ Virtual combines digital documentation,
+            spatial capture and AI-enabled workflows to
+            make construction information easier to
+            understand and use.
+          </p>
+
+        </div>
+
+
+        <div class="experience-copy">
+
+          <div class="eyebrow">
+            Our Experience
+          </div>
+
+          <h2>
+            Technology with a practical
+            project focus.
+          </h2>
+
+          <p>
+            AJ Virtual is focused on bringing modern
+            digital workflows into construction
+            documentation — without making the process
+            complicated for project teams.
+          </p>
+
+          <p>
+            Our approach combines visual site capture,
+            digital project information and structured
+            reporting to create a clearer record of what
+            is happening on site.
+          </p>
+
+          <a
+            href="#contact"
+            class="btn btn-primary"
+          >
+            Discuss Your Project
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECTS
+         ===================================================== -->
+
+    <section
+      id="projects"
+      class="section-light"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Projects
+          </div>
+
+          <h2>
+            Project examples and case studies.
+          </h2>
+
+          <p>
+            This section is ready for your actual project
+            photographs, walkthroughs and case studies.
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <div class="project-card">
+
+            <div class="project-image">
+              PROJECT IMAGE / VIDEO
+            </div>
+
+            <div class="project-info">
+
+              <small>
+                Residential Fit-Out
+              </small>
+
+              <h3>
+                Project 01
+              </h3>
+
+              <p>
+                Add a real project description here,
+                including the capture frequency and
+                outputs delivered.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-card">
+
+            <div class="project-image">
+              PROJECT IMAGE / VIDEO
+            </div>
+
+            <div class="project-info">
+
+              <small>
+                Commercial Fit-Out
+              </small>
+
+              <h3>
+                Project 02
+              </h3>
+
+              <p>
+                Add a real project description here,
+                including the capture frequency and
+                outputs delivered.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-card">
+
+            <div class="project-image">
+              PROJECT IMAGE / VIDEO
+            </div>
+
+            <div class="project-info">
+
+              <small>
+                Progress Monitoring
+              </small>
+
+              <h3>
+                Project 03
+              </h3>
+
+              <p>
+                Add a real project description here,
+                including the capture frequency and
+                outputs delivered.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VIDEO SHOWCASE
+         ===================================================== -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Video Showcase
+          </div>
+
+          <h2>
+            Show clients what the technology actually does.
+          </h2>
+
+          <p>
+            Replace these placeholders with your own
+            walkthrough and progress comparison videos.
+          </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+          <div class="video-placeholder">
+
+            <div class="play-button">
+              ▶
+            </div>
+
+            <strong>
+              Project Walkthrough
+            </strong>
+
+            <p>
+              Add a short video showing a captured site
+              and virtual walkthrough.
+            </p>
+
+          </div>
+
+
+          <div class="video-placeholder">
+
+            <div class="play-button">
+              ▶
+            </div>
+
+            <strong>
+              Progress Comparison
+            </strong>
+
+            <p>
+              Add a before/after or timeline comparison
+              showing how a project changed.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PACKAGES
+         ===================================================== -->
+
+    <section
+      id="packages"
+      class="section-light"
+    >
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Packages
+          </div>
+
+          <h2>
+            Simple recurring options.
+          </h2>
+
+          <p>
+            Starting prices for Melbourne projects.
+            Final pricing depends on project size,
+            frequency, location, complexity and reporting
+            requirements.
+          </p>
+
+        </div>
+
+
+        <div class="packages-grid">
+
+
+          <div class="package">
+
+            <h3>
+              Progress Documentation
+            </h3>
+
+            <p class="package-description">
+              A recurring visual record for smaller
+              projects.
+            </p>
+
+            <div class="price">
+              From $349
+              <small>/ week</small>
+            </div>
+
+            <ul>
+
+              <li>
+                Up to approximately 25,000 sq ft
+              </li>
+
+              <li>
+                360° site capture
+              </li>
+
+              <li>
+                Virtual tour
+              </li>
+
+              <li>
+                Point cloud output
+              </li>
+
+              <li>
+                Current / previous comparison
+              </li>
+
+              <li>
+                Standard hosting
+              </li>
+
+            </ul>
+
+            <a
+              href="#contact"
+              class="btn btn-secondary"
+            >
+              Request Quote
+            </a>
+
+          </div>
+
+
+          <div class="package featured">
+
+            <div class="package-badge">
+              MOST POPULAR
+            </div>
+
+            <h3>
+              Progress Monitoring
+            </h3>
+
+            <p class="package-description">
+              A more complete recurring monitoring
+              workflow for active projects.
+            </p>
+
+            <div class="price">
+              From $449
+              <small>/ week</small>
+            </div>
+
+            <ul>
+
+              <li>
+                Approximately 25,000–50,000 sq ft
+              </li>
+
+              <li>
+                360° site capture
+              </li>
+
+              <li>
+                Virtual tour
+              </li>
+
+              <li>
+                Point cloud
+              </li>
+
+              <li>
+                Progress comparison
+              </li>
+
+              <li>
+                Project timeline
+              </li>
+
+              <li>
+                Stakeholder-ready documentation
+              </li>
+
+            </ul>
+
+            <a
+              href="#contact"
+              class="btn btn-primary"
+            >
+              Request Quote
+            </a>
+
+          </div>
+
+
+          <div class="package">
+
+            <h3>
+              Progress + BIM
+            </h3>
+
+            <p class="package-description">
+              For projects requiring additional
+              model-based comparison.
+            </p>
+
+            <div class="price">
+              Custom
+            </div>
+
+            <ul>
+
+              <li>
+                Progress monitoring
+              </li>
+
+              <li>
+                3D / BIM comparison
+              </li>
+
+              <li>
+                As-planned vs as-executed
+              </li>
+
+              <li>
+                Detailed visual reporting
+              </li>
+
+              <li>
+                Project-specific workflow
+              </li>
+
+            </ul>
+
+            <a
+              href="#contact"
+              class="btn btn-secondary"
+            >
+              Discuss BIM Project
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+        <p class="pricing-note">
+          Pricing shown is indicative starting pricing.
+          Travel, project complexity, additional reporting,
+          BIM/model comparison and extended hosting may
+          affect the final quote.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FAQ
+         ===================================================== -->
+
+    <section id="faq">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            FAQ
+          </div>
+
+          <h2>
+            Common questions.
+          </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+
+          <div class="faq-item">
+
+            <button class="faq-question">
+
+              What areas do you service?
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              AJ Virtual is focused on Melbourne and
+              surrounding areas. Contact us with your
+              project location and we can assess the
+              requirements.
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <button class="faq-question">
+
+              How often can you capture a project?
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              Weekly and fortnightly monitoring are the
+              primary recurring options. One-off captures
+              can also be arranged depending on the project.
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <button class="faq-question">
+
+              Can you compare the site with a BIM model?
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              Yes, where suitable drawings, 3D models or
+              BIM information are available. BIM/model
+              comparison is quoted according to project
+              requirements.
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <button class="faq-question">
+
+              Do you provide engineering or compliance
+              certification?
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              AJ Virtual provides visual documentation,
+              progress monitoring and digital project
+              information. These services should not be
+              treated as engineering certification,
+              statutory inspection, surveying certification
+              or compliance certification.
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <button class="faq-question">
+
+              How long is project data hosted?
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              Standard project hosting is intended for
+              twelve months. Longer hosting requirements
+              can be discussed as part of the project quote.
+
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <button class="faq-question">
+
+              Can I request a one-off capture?
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              Yes. Select "One-off" in the enquiry form
+              and provide the project details so we can
+              assess the required scope.
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+         ===================================================== -->
+
+    <section
+      id="contact"
+      class="contact-section"
+    >
+
+      <div class="container contact-grid">
+
+
+        <div class="contact-copy">
+
+          <div class="eyebrow">
+            Start a Project
+          </div>
+
+          <h2>
+            Your project is changing every day.
+            Make sure you have the record.
+          </h2>
+
+          <p>
+            Tell us about your project and what you need
+            captured, compared or monitored. We'll use the
+            information to understand the scope and prepare
+            the right approach.
+          </p>
+
+
+          <ul class="contact-points">
+
+            <li>
+              <span>✓</span>
+              Residential & commercial fit-outs
+            </li>
+
+            <li>
+              <span>✓</span>
+              Weekly & fortnightly monitoring
+            </li>
+
+            <li>
+              <span>✓</span>
+              360° virtual documentation
+            </li>
+
+            <li>
+              <span>✓</span>
+              Point clouds & progress comparison
+            </li>
+
+            <li>
+              <span>✓</span>
+              BIM / 3D comparison available
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- =================================================
+             FORMSPREE FORM
+             ================================================= -->
+
+        <div class="contact-form">
+
+
+          <form
+            action="https://formspree.io/f/xrpeqrkn"
+            method="POST"
+            id="contact-form"
+            accept-charset="UTF-8"
+          >
+
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New AJ Virtual Project Enquiry"
+            >
+
+
+            <!-- Honeypot spam field -->
+            <input
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              style="
+                position:absolute;
+                left:-9999px;
+                width:1px;
+                height:1px;
+                overflow:hidden;
+              "
+            >
+
+
+            <!-- NAME + COMPANY -->
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label for="full-name">
+                  Full Name <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="full-name"
+                  name="name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="company">
+                  Company
+                </label>
+
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Company name"
+                  autocomplete="organization"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- EMAIL + PHONE -->
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label for="email">
+                  Email <span>*</span>
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@company.com"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+61 ..."
+                  autocomplete="tel"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- PROJECT TYPE + SIZE -->
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label for="project-type">
+                  Project Type
+                </label>
+
+                <select
+                  id="project-type"
+                  name="project_type"
+                >
+
+                  <option value="Residential Fit-Out">
+                    Residential Fit-Out
+                  </option>
+
+                  <option value="Commercial Fit-Out">
+                    Commercial Fit-Out
+                  </option>
+
+                  <option value="Renovation / Refurbishment">
+                    Renovation / Refurbishment
+                  </option>
+
+                  <option value="Retail">
+                    Retail
+                  </option>
+
+                  <option value="Office">
+                    Office
+                  </option>
+
+                  <option value="Hospitality">
+                    Hospitality
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="project-size">
+                  Approx. Project Size
+                </label>
+
+                <input
+                  type="text"
+                  id="project-size"
+                  name="project_size"
+                  placeholder="e.g. 15,000 sq ft"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- LOCATION + STAGE -->
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label for="project-location">
+                  Project Location
+                </label>
+
+                <input
+                  type="text"
+                  id="project-location"
+                  name="project_location"
+                  placeholder="Melbourne, VIC"
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="construction-stage">
+                  Construction Stage
+                </label>
+
+                <select
+                  id="construction-stage"
+                  name="construction_stage"
+                >
+
+                  <option value="Pre-construction">
+                    Pre-construction
+                  </option>
+
+                  <option value="Early construction">
+                    Early construction
+                  </option>
+
+                  <option value="Interior fit-out">
+                    Interior fit-out
+                  </option>
+
+                  <option value="Finishing stage">
+                    Finishing stage
+                  </option>
+
+                  <option value="Near completion">
+                    Near completion
+                  </option>
+
+                  <option value="Completed">
+                    Completed
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- FREQUENCY -->
+
+            <div class="form-group">
+
+              <label for="monitoring-frequency">
+                Preferred Monitoring Frequency
+              </label>
+
+              <select
+                id="monitoring-frequency"
+                name="monitoring_frequency"
+              >
+
+                <option value="Weekly">
+                  Weekly
+                </option>
+
+                <option value="Fortnightly">
+                  Fortnightly
+                </option>
+
+                <option value="One-off">
+                  One-off
+                </option>
+
+                <option value="Not sure">
+                  Not sure
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="form-group">
+
+              <label>
+                Services you're interested in
+              </label>
+
+
+              <div class="checkbox-grid">
+
+
+                <label class="checkbox-item">
+
+                  <input
+                    type="checkbox"
+                    name="services[]"
+                    value="360 Virtual Tour"
+                  >
+
+                  <span>
+                    360° Virtual Tour
+                  </span>
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                  <input
+                    type="checkbox"
+                    name="services[]"
+                    value="3D Point Cloud"
+                  >
+
+                  <span>
+                    3D Point Cloud
+                  </span>
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                  <input
+                    type="checkbox"
+                    name="services[]"
+                    value="Progress Monitoring"
+                  >
+
+                  <span>
+                    Progress Monitoring
+                  </span>
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                  <input
+                    type="checkbox"
+                    name="services[]"
+                    value="BIM Comparison"
+                  >
+
+                  <span>
+                    BIM Comparison
+                  </span>
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                  <input
+                    type="checkbox"
+                    name="services[]"
+                    value="Progress Reporting"
+                  >
+
+                  <span>
+                    Progress Reporting
+                  </span>
+
+                </label>
+
+
+                <label class="checkbox-item">
+
+                  <input
+                    type="checkbox"
+                    name="services[]"
+                    value="As-Built Documentation"
+                  >
+
+                  <span>
+                    As-Built Documentation
+                  </span>
+
+                </label>
+
+
+              </div>
+
+            </div>
+
+
+            <!-- BIM -->
+
+            <div class="form-group">
+
+              <label for="bim-information">
+                Do you have drawings / BIM / 3D model
+                information?
+              </label>
+
+              <select
+                id="bim-information"
+                name="bim_information"
+              >
+
+                <option value="Yes">
+                  Yes
+                </option>
+
+                <option value="No">
+                  No
+                </option>
+
+                <option value="Not sure">
+                  Not sure
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- DETAILS -->
+
+            <div class="form-group">
+
+              <label for="project-details">
+                Project Details
+              </label>
+
+              <textarea
+                id="project-details"
+                name="message"
+                rows="7"
+                placeholder="Tell us about your project, what you need captured, your current stage, and what you would like to compare or monitor."
+              ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+              type="submit"
+              class="form-submit"
+            >
+              Request My Project Assessment
+            </button>
+
+
+            <p class="form-note">
+              Your enquiry will be securely submitted
+              through our online enquiry form.
+            </p>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <div>
+
+            <h2>
+              Make your project
+              easier to see.
+            </h2>
+
+            <p>
+              Build a consistent visual record of your
+              construction progress and give your
+              stakeholders better visibility.
+            </p>
+
+          </div>
+
+
+          <a
+            href="#contact"
+            class="btn"
+          >
+            Request a Quote
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <div class="logo">
+
+            <span class="logo-mark">
+              AJ
+            </span>
+
+            <span>
+              AJ Virtual
+            </span>
+
+          </div>
+
+
+          <p>
+            Construction progress monitoring and visual
+            documentation for residential and commercial
+            fit-outs across Melbourne.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            Explore
+          </div>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#services">
+                Services
+              </a>
+            </li>
+
+            <li>
+              <a href="#process">
+                Process
+              </a>
+            </li>
+
+            <li>
+              <a href="#projects">
+                Projects
+              </a>
+            </li>
+
+            <li>
+              <a href="#packages">
+                Packages
+              </a>
+            </li>
+
+            <li>
+              <a href="#faq">
+                FAQ
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            Contact
+          </div>
+
+          <ul class="footer-links">
+
+            <li>
+              Melbourne, Victoria
+            </li>
+
+            <li>
+              <a href="mailto:aj3dvt@gmail.com">
+                aj3dvt@gmail.com
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact">
+                Request a Quote
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year"></span> AJ Virtual.
+          All rights reserved.
+        </span>
+
+        <span>
+          Construction Progress Monitoring &
+          Visual Documentation
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       IMPORTANT:
+       There is NO JavaScript submission handler.
+       Formspree receives the form through normal POST.
+       ======================================================= -->
+
+  <script>
+
+    /* Mobile navigation */
+
+    const mobileMenu =
+      document.getElementById("mobile-menu");
+
+    const navLinks =
+      document.getElementById("nav-links");
+
+
+    mobileMenu.addEventListener(
+      "click",
+      function () {
+
+        navLinks.classList.toggle("active");
+
+      }
+    );
+
+
+    /* Close mobile menu after clicking a link */
+
+    document
+      .querySelectorAll("#nav-links a")
+      .forEach(function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            navLinks.classList.remove("active");
+
+          }
+        );
+
+      });
+
+
+    /* FAQ */
+
+    document
+      .querySelectorAll(".faq-question")
+      .forEach(function (question) {
+
+        question.addEventListener(
+          "click",
+          function () {
+
+            const item =
+              question.closest(".faq-item");
+
+            item.classList.toggle("open");
+
+          }
+        );
+
+      });
+
+
+    /* Current year */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+  </script>
+
+
+</body>
+</html>
