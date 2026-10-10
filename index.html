@@ -2025,17 +2025,23 @@ section {
 
 
 .contact-grid {
-
     display: grid;
-
-    grid-template-columns:
-        .72fr
-        1.28fr;
-
-    gap: 50px;
-
-    align-items: start;
+    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
 }
+.contact-copy { max-width: 520px; }
+.contact-copy .eyebrow { color: var(--gold); }
+.contact-copy h2 { max-width: 12ch; }
+.contact-copy > p {
+    text-align: left;
+    color: rgba(255,255,255,.76);
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 24px;
+}
+.contact-list { display: grid; gap: 13px; }
+.contact-list li { color: rgba(255,255,255,.9); line-height: 1.5; }
 
 
 .contact-copy h2 {
@@ -3009,6 +3015,125 @@ header {
     max-width: 100%;
     max-height: 100%;
 }
+
+
+/* TECHNOLOGY DETAILS — structured, readable table */
+.technology-details {
+    margin-top: 34px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: rgba(255,255,255,.72);
+}
+.technology-details-heading {
+    margin-bottom: 18px;
+}
+.technology-details-heading .eyebrow {
+    margin-bottom: 10px;
+}
+.technology-details-heading h3 {
+    color: var(--green-dark);
+    font-size: clamp(23px, 2.5vw, 30px);
+    line-height: 1.15;
+    letter-spacing: -.7px;
+    margin-bottom: 9px;
+}
+.technology-details-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+}
+.technology-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--cream-light);
+}
+.technology-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+    font-size: 12px;
+    line-height: 1.55;
+    text-align: left;
+}
+.technology-table th {
+    background: var(--green-dark);
+    color: white;
+    font-size: 11px;
+    letter-spacing: .35px;
+    text-transform: uppercase;
+    padding: 13px 14px;
+    font-weight: 800;
+}
+.technology-table td {
+    padding: 14px;
+    color: #53615c;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+.technology-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+.technology-table tbody tr:nth-child(even) {
+    background: rgba(35,72,63,.035);
+}
+.technology-table td:first-child {
+    color: var(--green-dark);
+    font-weight: 800;
+    white-space: nowrap;
+}
+.technology-table td strong {
+    color: var(--green);
+}
+.tech-stage {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    border-radius: 7px;
+    background: rgba(217,164,65,.2);
+    color: #8c681d;
+    font-size: 10px;
+    font-weight: 900;
+}
+.technology-note {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+}
+@media(max-width:650px) {
+    .technology-details {
+        padding: 16px;
+        margin-top: 24px;
+    }
+    .technology-table {
+        min-width: 610px;
+    }
+}
+
+
+/* WhatsApp-first contact section */
+.whatsapp-contact { padding: clamp(28px, 4.5vw, 48px); border: 1px solid var(--border); border-radius: 26px; background: var(--cream-light); box-shadow: 0 18px 55px rgba(0,0,0,.12); }
+.whatsapp-mark { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 50%; background: #e5f5e9; color: #168447; margin-bottom: 22px; }
+.whatsapp-mark svg { width: 36px; height: 36px; }
+.whatsapp-contact h3 { margin: 10px 0 14px; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.2; color: var(--green-dark); }
+.whatsapp-contact > p:not(.whatsapp-detail):not(.form-note) { color: var(--muted); line-height: 1.7; }
+.whatsapp-detail { margin: 16px 0; padding: 16px 18px; border-radius: 14px; background: rgba(35,72,63,.06); line-height: 1.65; color: var(--green-dark); }
+.whatsapp-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 58px; padding: 16px 26px; border-radius: 999px; background: #168447; color: #fff; border-color: #168447; font-weight: 800; box-shadow: 0 8px 22px rgba(22,132,71,.18); }
+.whatsapp-button:hover { background: #116b38; color: #fff; }
+.whatsapp-contact .form-note { margin-top: 18px; }
+.whatsapp-contact .form-note a { text-decoration: underline; }
+@media(max-width:800px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+  .contact-copy h2 { max-width: 15ch; }
+  .whatsapp-contact { border-radius: 22px; }
+}
+
 </style>
 </style>
 
@@ -3035,6 +3160,24 @@ header {
         min-height: 68px;
     }
 }
+</style>
+
+
+<style>
+/* Refined digital outputs: one cohesive green area, not a copied white-card layout */
+.outputs-intro-line{display:flex;align-items:center;gap:13px;margin:0 0 22px;color:rgba(255,255,255,.58);font-size:10px;font-weight:850;letter-spacing:1.4px}
+.outputs-intro-line i{height:1px;flex:1;background:rgba(217,164,65,.45);max-width:110px}
+.outputs-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.output{min-height:245px;padding:25px 28px 22px;border:1px solid rgba(255,255,255,.075);background:linear-gradient(135deg,rgba(35,72,63,.92),rgba(16,33,29,.98));position:relative;overflow:hidden;justify-content:flex-start}
+.output:after{content:"";position:absolute;right:-40px;top:-55px;width:150px;height:150px;border:1px solid rgba(217,164,65,.12);border-radius:50%;box-shadow:0 0 0 18px rgba(255,255,255,.018),0 0 0 38px rgba(255,255,255,.012);pointer-events:none}
+.output-number{color:var(--gold);letter-spacing:1.1px;margin-bottom:0}
+.output-graphic{height:72px;margin:7px 0 10px}
+.output h3{font-size:21px;margin:0 0 8px;position:relative;z-index:1}
+.output p{font-size:13px;line-height:1.65;color:rgba(255,255,255,.72);max-width:520px;margin-bottom:14px;position:relative;z-index:1}
+.output-meta{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,.12);font-size:10px;position:relative;z-index:1}
+.output-meta span{color:rgba(255,255,255,.46);text-transform:uppercase;letter-spacing:1px;font-weight:800}
+.output-meta strong{color:#f0c56d;font-weight:750}
+@media(max-width:760px){.outputs-grid{grid-template-columns:1fr}.output{min-height:220px;padding:22px}.outputs-intro-line{gap:7px;font-size:8px;letter-spacing:.8px}.outputs-intro-line i{max-width:40px}}
 </style>
 
 </head>
@@ -3096,20 +3239,11 @@ Technology
 Projects
 </a>
 
-<a href="#packages">
-Packages
-</a>
-
 <a href="#faq">
 FAQ
 </a>
 
-<a
-href="#contact"
-class="nav-cta"
->
-Get a Quote
-</a>
+<a href="#contact" class="nav-cta">Contact</a>
 
 </nav>
 
@@ -3400,7 +3534,6 @@ MELBOURNE • AUSTRALIA
 
 <div
 class="tech-strip"
-id="technology"
 >
 
 <div class="container tech-strip-inner">
@@ -3450,168 +3583,6 @@ Progress + BIM Comparison
 <!-- =========================================================
      SERVICES
      ========================================================= -->
-
-<section
-id="services"
-class="section-light"
->
-
-<div class="container">
-
-
-<div class="section-heading">
-
-<div class="eyebrow">
-What We Do
-</div>
-
-
-<h2>
-Construction information,
-without the information overload.
-</h2>
-
-
-<p>
-
-AJ Virtual turns site capture into useful digital
-information for project teams, owners, designers,
-builders and commercial stakeholders.
-
-</p>
-
-</div>
-
-
-<div class="services-grid">
-
-
-<div class="service">
-
-<div class="service-number">
-01
-</div>
-
-<h3>
-360° Site Capture
-</h3>
-
-<p>
-
-Create an immersive visual record of the project
-site at a specific point in time.
-
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-02
-</div>
-
-<h3>
-Virtual Site Tours
-</h3>
-
-<p>
-
-Allow stakeholders to remotely review project
-conditions without relying only on photographs.
-
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-03
-</div>
-
-<h3>
-3D Point Clouds
-</h3>
-
-<p>
-
-Convert captured environments into spatial digital
-information for documentation and project review.
-
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-04
-</div>
-
-<h3>
-Progress Monitoring
-</h3>
-
-<p>
-
-Compare captures over time to create a consistent
-visual record of construction progress.
-
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-05
-</div>
-
-<h3>
-BIM / 3D Comparison
-</h3>
-
-<p>
-
-Where suitable models are available, compare
-captured conditions against planned information.
-
-</p>
-
-</div>
-
-
-<div class="service">
-
-<div class="service-number">
-06
-</div>
-
-<h3>
-Visual Reporting
-</h3>
-
-<p>
-
-Turn site information into clear documentation
-for stakeholder review and project discussions.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
 
 <!-- =========================================================
      PROCESS
@@ -3738,7 +3709,7 @@ who need to make project decisions.
      HUMAN / REAL SITE SECTION
      ========================================================= -->
 
-<section class="section-light">
+<section class="section-light" id="technology">
 
 <div class="container field-grid">
 
@@ -3905,6 +3876,54 @@ Project Decisions
 
 </div>
 
+<div class="technology-details" aria-label="AJ Virtual technology workflow">
+  <div class="technology-details-heading">
+    <span class="eyebrow">Technology stack</span>
+    <h3>From a site walk-through to a useful digital record.</h3>
+    <p>We combine on-site 360° capture with Preimage processing and project-specific review. The deliverables depend on the capture, available drawings or models, and agreed scope.</p>
+  </div>
+
+  <div class="technology-table-wrap">
+    <table class="technology-table">
+      <thead>
+        <tr>
+          <th scope="col">Stage</th>
+          <th scope="col">Technology</th>
+          <th scope="col">What it does</th>
+          <th scope="col">Project output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tech-stage">01</span> Capture</td>
+          <td><strong>360° camera</strong></td>
+          <td>Records a walk-through of visible site conditions from multiple directions.</td>
+          <td>Time-stamped visual site record</td>
+        </tr>
+        <tr>
+          <td><span class="tech-stage">02</span> Process</td>
+          <td><strong>Preimage platform</strong></td>
+          <td>Processes uploaded 360° footage into navigable 3D experiences and spatial outputs.</td>
+          <td>Virtual tour and, where supported, point-cloud / model outputs</td>
+        </tr>
+        <tr>
+          <td><span class="tech-stage">03</span> Compare</td>
+          <td><strong>Repeat captures + project files</strong></td>
+          <td>Reviews changes between capture dates and, where suitable files are supplied, compares site information with drawings or BIM / 3D models.</td>
+          <td>Progress history and planned-versus-observed review</td>
+        </tr>
+        <tr>
+          <td><span class="tech-stage">04</span> Share</td>
+          <td><strong>Digital project record</strong></td>
+          <td>Organises the agreed visual outputs so owners, designers and contractors can review them remotely.</td>
+          <td>Shareable documentation for project discussions</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="technology-note">Note: outputs and comparison options vary by site conditions, source files, platform processing and project scope. AJ Virtual provides visual documentation and progress information, not statutory surveying or engineering certification.</p>
+</div>
+
 </div>
 
 </div>
@@ -3916,9 +3935,7 @@ Project Decisions
      OUTPUTS
      ========================================================= -->
 
-<section class="section-dark">
-
-<div class="container">
+<section id="services" class="section-dark"><div class="container">
 
 
 <div class="section-heading">
@@ -3935,22 +3952,26 @@ Turn one site visit into useful project information.
 
 <p>
 
-The value isn't simply the scan. It is what the
-captured information allows your project team to
-see, compare and understand.
+A site capture becomes more useful when your team can
+revisit conditions, understand space and track change
+without relying on scattered photographs.
 
 </p>
 
 <p class="section-support">
 
-One site visit can become a visual record, spatial
-data, a time-based progress history and a reference
-for planned-versus-executed review.
+The outputs below depend on site conditions, processing
+and the project files available. We agree the right
+combination with you before capture.
 
 </p>
 
 </div>
 
+
+<div class="outputs-intro-line">
+  <span>CAPTURE</span><i></i><span>PROCESS</span><i></i><span>REVIEW</span><i></i><span>SHARE</span>
+</div>
 
 <div class="outputs-grid">
 
@@ -3968,8 +3989,9 @@ for planned-versus-executed review.
 </h3>
 
 <p>
-Remote visual access to captured site conditions.
+Move through a navigable visual record to review visible site conditions remotely, revisit areas and support project conversations.
 </p>
+<div class="output-meta"><span>Useful for</span><strong>Remote site review</strong></div>
 
 </div>
 
@@ -3989,8 +4011,9 @@ Remote visual access to captured site conditions.
 </h3>
 
 <p>
-A spatial digital representation of the captured environment.
+A spatial representation generated from processed capture, where supported, to help teams understand the captured environment beyond flat photos.
 </p>
+<div class="output-meta"><span>Useful for</span><strong>Spatial context</strong></div>
 
 </div>
 
@@ -4008,8 +4031,9 @@ Progress Timeline
 </h3>
 
 <p>
-A visual record of how the project changes.
+Compare repeat captures to review visible changes between dates and maintain a consistent visual history as work progresses.
 </p>
+<div class="output-meta"><span>Useful for</span><strong>Progress reviews</strong></div>
 
 </div>
 
@@ -4027,8 +4051,9 @@ BIM / 3D Comparison
 </h3>
 
 <p>
-Compare available planned information against site capture.
+Where suitable drawings or BIM / 3D models are supplied, review captured conditions alongside planned information to support discussion.
 </p>
+<div class="output-meta"><span>Useful for</span><strong>Plan-to-site review</strong></div>
 
 </div>
 
@@ -4650,223 +4675,6 @@ Time Context
 
 
 <!-- =========================================================
-     PACKAGES
-     ========================================================= -->
-
-<section
-id="packages"
-class="section-light"
->
-
-<div class="container">
-
-
-<div class="section-heading center">
-
-<div class="eyebrow">
-Packages
-</div>
-
-
-<h2>
-Simple recurring options.
-</h2>
-
-
-<p>
-
-Starting pricing for Melbourne projects.
-Final pricing depends on project size, frequency,
-travel, complexity and reporting requirements.
-
-</p>
-
-</div>
-
-
-<div class="packages">
-
-
-<div class="package">
-
-<h3>
-Progress Documentation
-</h3>
-
-<p>
-For smaller projects requiring a consistent visual record.
-</p>
-
-
-<div class="price">
-From $349
-<small>/ week</small>
-</div>
-
-
-<ul>
-
-<li>
-Up to approximately 25,000 sq ft
-</li>
-
-<li>
-360° site capture
-</li>
-
-<li>
-Virtual tour
-</li>
-
-<li>
-Point cloud
-</li>
-
-<li>
-Progress comparison
-</li>
-
-<li>
-Standard hosting
-</li>
-
-</ul>
-
-
-<a
-href="#contact"
-class="btn btn-outline"
->
-Request Quote
-</a>
-
-</div>
-
-
-<div class="package featured">
-
-<div class="badge">
-MOST POPULAR
-</div>
-
-
-<h3>
-Progress Monitoring
-</h3>
-
-<p>
-For active projects requiring recurring monitoring and documentation.
-</p>
-
-
-<div class="price">
-From $449
-<small>/ week</small>
-</div>
-
-
-<ul>
-
-<li>
-Approximately 25,000–50,000 sq ft
-</li>
-
-<li>
-360° site capture
-</li>
-
-<li>
-Virtual tour
-</li>
-
-<li>
-Point cloud
-</li>
-
-<li>
-Progress comparison
-</li>
-
-<li>
-Project timeline
-</li>
-
-<li>
-Stakeholder-ready documentation
-</li>
-
-</ul>
-
-
-<a
-href="#contact"
-class="btn btn-primary"
->
-Request Quote
-</a>
-
-</div>
-
-
-<div class="package">
-
-<h3>
-Progress + BIM
-</h3>
-
-<p>
-For projects requiring additional model-based comparison.
-</p>
-
-
-<div class="price">
-Custom
-</div>
-
-
-<ul>
-
-<li>
-Progress monitoring
-</li>
-
-<li>
-3D / BIM comparison
-</li>
-
-<li>
-As-planned vs as-executed
-</li>
-
-<li>
-Detailed visual reporting
-</li>
-
-<li>
-Project-specific workflow
-</li>
-
-</ul>
-
-
-<a
-href="#contact"
-class="btn btn-outline"
->
-Discuss BIM Project
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
      FAQ
      ========================================================= -->
 
@@ -5070,440 +4878,21 @@ captured, compared or monitored.
 </div>
 
 
-<!-- =======================================================
-     FORMSPREE
-     ======================================================= -->
-
-<div class="contact-form">
-
-
-<form
-action="https://formspree.io/f/xrpeqrkn"
-method="POST"
-id="contact-form"
-accept-charset="UTF-8"
->
-
-
-<input
-type="hidden"
-name="_subject"
-value="New AJ Virtual Project Enquiry"
->
-
-
-<input
-type="text"
-name="_gotcha"
-tabindex="-1"
-autocomplete="off"
-style="
-position:absolute;
-left:-9999px;
-width:1px;
-height:1px;
-overflow:hidden;
-"
->
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label for="full-name">
-Full Name <span>*</span>
-</label>
-
-<input
-type="text"
-id="full-name"
-name="name"
-placeholder="Your full name"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="company">
-Company
-</label>
-
-<input
-type="text"
-id="company"
-name="company"
-placeholder="Company name"
->
-
-</div>
-
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label for="email">
-Email <span>*</span>
-</label>
-
-<input
-type="email"
-id="email"
-name="email"
-placeholder="you@company.com"
-required
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="phone">
-Phone
-</label>
-
-<input
-type="tel"
-id="phone"
-name="phone"
-placeholder="+61 ..."
->
-
-</div>
-
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label for="project-type">
-Project Type
-</label>
-
-<select
-id="project-type"
-name="project_type"
->
-
-<option>
-Residential Fit-Out
-</option>
-
-<option>
-Commercial Fit-Out
-</option>
-
-<option>
-Renovation / Refurbishment
-</option>
-
-<option>
-Retail
-</option>
-
-<option>
-Office
-</option>
-
-<option>
-Hospitality
-</option>
-
-<option>
-Other
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="project-size">
-Approx. Project Size
-</label>
-
-<input
-type="text"
-id="project-size"
-name="project_size"
-placeholder="e.g. 25,000 sq ft"
->
-
-</div>
-
-
-</div>
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label for="project-location">
-Project Location
-</label>
-
-<input
-type="text"
-id="project-location"
-name="project_location"
-placeholder="Melbourne, VIC"
->
-
-</div>
-
-
-<div class="form-group">
-
-<label for="construction-stage">
-Construction Stage
-</label>
-
-<select
-id="construction-stage"
-name="construction_stage"
->
-
-<option>
-Pre-construction
-</option>
-
-<option>
-Early construction
-</option>
-
-<option>
-Interior fit-out
-</option>
-
-<option>
-Finishing stage
-</option>
-
-<option>
-Near completion
-</option>
-
-<option>
-Completed
-</option>
-
-</select>
-
-</div>
-
-
-</div>
-
-
-<div class="form-group">
-
-<label for="frequency">
-Preferred Monitoring Frequency
-</label>
-
-<select
-id="frequency"
-name="monitoring_frequency"
->
-
-<option>
-Weekly
-</option>
-
-<option>
-Fortnightly
-</option>
-
-<option>
-One-off
-</option>
-
-<option>
-Not sure
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>
-Services you're interested in
-</label>
-
-
-<div class="checkbox-grid">
-
-
-<label class="checkbox-item">
-
-<input
-type="checkbox"
-name="services[]"
-value="360 Virtual Tour"
->
-
-360° Virtual Tour
-
-</label>
-
-
-<label class="checkbox-item">
-
-<input
-type="checkbox"
-name="services[]"
-value="3D Point Cloud"
->
-
-3D Point Cloud
-
-</label>
-
-
-<label class="checkbox-item">
-
-<input
-type="checkbox"
-name="services[]"
-value="Progress Monitoring"
->
-
-Progress Monitoring
-
-</label>
-
-
-<label class="checkbox-item">
-
-<input
-type="checkbox"
-name="services[]"
-value="BIM Comparison"
->
-
-BIM Comparison
-
-</label>
-
-
-<label class="checkbox-item">
-
-<input
-type="checkbox"
-name="services[]"
-value="Progress Reporting"
->
-
-Progress Reporting
-
-</label>
-
-
-<label class="checkbox-item">
-
-<input
-type="checkbox"
-name="services[]"
-value="As-Built Documentation"
->
-
-As-Built Documentation
-
-</label>
-
-
-</div>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="bim">
-
-Do you have drawings / BIM / 3D model information?
-
-</label>
-
-
-<select
-id="bim"
-name="bim_information"
->
-
-<option>
-Yes
-</option>
-
-<option>
-No
-</option>
-
-<option>
-Not sure
-</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label for="message">
-Project Details
-</label>
-
-
-<textarea
-id="message"
-name="message"
-placeholder="Tell us about your project, what you need captured, your current stage and what you would like to compare or monitor."
-></textarea>
-
-</div>
-
-
-<button
-type="submit"
-class="form-submit"
->
-
-Request My Project Assessment
-
-</button>
-
-
-<p class="form-note">
-
-Your enquiry will be securely submitted through
-our online enquiry form.
-
-</p>
-
-
-</form>
+<div class="contact-form whatsapp-contact">
+
+  <div class="whatsapp-mark" aria-hidden="true">
+    <svg viewBox="0 0 48 48" role="img" aria-label="WhatsApp">
+      <path fill="currentColor" d="M24 4C13.1 4 4.2 12.7 4.2 23.5c0 3.5.9 6.8 2.6 9.7L4 44l11.1-2.9c2.7 1.4 5.7 2.1 8.8 2.1h.1c10.9 0 19.8-8.8 19.8-19.6C43.8 12.7 34.9 4 24 4Zm0 35.8h-.1c-2.8 0-5.5-.8-7.8-2.2l-.6-.4-6.6 1.7 1.8-6.4-.4-.7a16.1 16.1 0 0 1-2.5-8.4C7.8 14.6 15.1 7.4 24 7.4s16.2 7.2 16.2 16.1S32.9 39.8 24 39.8Zm8.9-12.1c-.5-.2-2.7-1.3-3.1-1.4-.4-.2-.7-.2-1 .2-.3.5-1.2 1.4-1.5 1.7-.3.3-.5.4-1 .1-.5-.2-1.9-.7-3.7-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-.9l.7-.8c.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8-.1-.2-1-2.4-1.4-3.3-.4-.9-.8-.8-1-.8h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.5-1.6 3.7s1.6 4.2 1.8 4.5c.2.3 3.1 4.7 7.5 6.6 1 .4 1.8.7 2.4.9 1 .3 2 .3 2.7.2.8-.1 2.7-1.1 3.1-2.2.4-1.1.4-2 .3-2.2-.1-.2-.4-.3-.9-.5Z"/>
+    </svg>
+  </div>
+
+  <div class="eyebrow">Direct enquiry</div>
+  <h3>Let’s talk about your project.</h3>
+  <p>Message AJ Virtual directly on WhatsApp Business to request a demo and discuss your project.</p>
+  <p class="whatsapp-detail"><strong>WhatsApp Business:</strong> +61 424 829 919</p>
+  <p class="whatsapp-detail"><strong>Helpful to include:</strong> project location, approximate size, project type and whether you need weekly or fortnightly monitoring.</p>
+  <a class="btn whatsapp-button" href="https://wa.me/61424829919?text=I%20want%20a%20demo" target="_blank" rel="noopener noreferrer">Message us on WhatsApp Business</a>
+  <p class="form-note">Your message opens in WhatsApp with the demo request ready to send.</p>
 
 </div>
 
@@ -5512,45 +4901,7 @@ our online enquiry form.
 </section>
 
 
-<!-- =========================================================
-     FINAL CTA
-     ========================================================= -->
 
-<section class="final-cta">
-
-<div class="container">
-
-
-<div class="cta">
-
-<div>
-
-<h2>
-Make your project easier to see.
-</h2>
-
-<p>
-
-Build a consistent visual record of construction
-progress and give your stakeholders better visibility.
-
-</p>
-
-</div>
-
-
-<a
-href="#contact"
-class="btn"
->
-Request a Quote
-</a>
-
-</div>
-
-</div>
-
-</section>
 
 
 </main>
@@ -5627,12 +4978,6 @@ Projects
 </a>
 </li>
 
-<li>
-<a href="#packages">
-Packages
-</a>
-</li>
-
 </ul>
 
 </div>
@@ -5659,7 +5004,7 @@ aj3dvt@gmail.com
 
 <li>
 <a href="#contact">
-Request a Quote
+WhatsApp Business: +61 424 829 919
 </a>
 </li>
 
