@@ -3180,6 +3180,86 @@ header {
 @media(max-width:760px){.outputs-grid{grid-template-columns:1fr}.output{min-height:220px;padding:22px}.outputs-intro-line{gap:7px;font-size:8px;letter-spacing:.8px}.outputs-intro-line i{max-width:40px}}
 </style>
 
+<style>
+
+/* MOBILE-FIRST REFINEMENTS — AJ Virtual */
+html { width:100%; max-width:100%; overflow-x:clip; scroll-padding-top:84px; }
+body { width:100%; max-width:100%; overflow-x:clip; }
+img, svg, video, canvas, iframe { max-width:100%; }
+.container { width:min( calc(100% - 40px), var(--max-width)); }
+.grid, .hero-grid, .field-grid, .comparison-grid, .contact-grid, .services-grid, .process-grid, .outputs-grid, .stakeholder-grid, .case-grid, .packages, .footer-grid { min-width:0; }
+
+@media (max-width: 760px) {
+  .container { width:calc(100% - 32px) !important; max-width:100%; }
+  section { padding:52px 0 !important; }
+  header { position:sticky; top:0; z-index:1000; }
+  .nav { min-height:66px; gap:12px; }
+  .logo { min-width:0; font-size:18px; }
+  .mobile-menu { display:block; flex:0 0 auto; width:42px; height:42px; border-radius:12px; }
+  .nav-links { z-index:1001; top:calc(100% + 8px) !important; left:16px !important; right:16px !important; width:auto; max-height:calc(100dvh - 90px); overflow-y:auto; padding:12px !important; gap:4px; }
+  .nav-links a { display:flex; align-items:center; min-height:44px; padding:12px 14px !important; font-size:15px; }
+
+  .hero { padding-top:38px !important; }
+  .hero-grid, .field-grid, .comparison-grid, .contact-grid { grid-template-columns:minmax(0,1fr) !important; gap:28px !important; }
+  .hero-grid > *, .field-grid > *, .comparison-grid > *, .contact-grid > * { min-width:0; }
+  .hero h1 { font-size:clamp(36px, 9.5vw, 48px) !important; line-height:1.03 !important; letter-spacing:-1.7px !important; overflow-wrap:normal; }
+  .hero-description { font-size:16px; line-height:1.65; }
+  .usp-box { padding:18px !important; }
+  .hero .btn, .hero a.btn, .cta .btn, .whatsapp-button { width:100%; justify-content:center; text-align:center; min-height:50px; }
+  .hero-stats { grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:7px !important; }
+  .hero-stat { min-width:0; padding:10px 6px !important; }
+  .hero-stat strong { font-size:clamp(12px,3.6vw,16px) !important; }
+  .hero-stat span { font-size:9px !important; line-height:1.3; overflow-wrap:anywhere; }
+  .hero-visual { min-height:clamp(330px, 100vw, 430px) !important; width:100%; max-width:100%; }
+  .hero-image { max-width:88%; }
+  .hero-svg-inline { width:100%; height:auto; display:block; }
+
+  .section-heading h2, h2 { overflow-wrap:break-word; }
+  .section-heading h2 { font-size:clamp(28px,7.5vw,38px) !important; line-height:1.12; letter-spacing:-.8px; }
+  .section-heading p { font-size:16px; line-height:1.65; }
+  .outputs-grid, .services-grid, .process-grid, .stakeholder-grid, .case-grid, .packages { grid-template-columns:minmax(0,1fr) !important; }
+  .output { min-height:0 !important; padding:21px !important; border-radius:22px; }
+  .output h3 { font-size:20px !important; line-height:1.2; }
+  .output p { font-size:14px !important; line-height:1.65; }
+  .output-graphic { max-width:100%; }
+  .outputs-intro-line { font-size:9px !important; letter-spacing:.8px !important; flex-wrap:wrap; }
+  .service, .service-card, .process-step, .stakeholder, .case-card, .package { min-width:0; padding:22px !important; }
+
+  .field-image { min-height:280px !important; width:100%; }
+  .workflow-graphic { grid-template-columns:repeat(3,minmax(0,1fr)) !important; gap:6px !important; }
+  .workflow-box { min-width:0; padding:12px 6px !important; text-align:center; }
+  .workflow-box strong { font-size:10px !important; }
+  .workflow-box span { font-size:9px !important; }
+  .technology-details { padding:16px !important; margin-top:22px !important; border-radius:18px !important; }
+  .technology-details h3 { font-size:23px !important; line-height:1.2; }
+  .technology-table-wrap { width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .technology-table { min-width:620px; }
+  .technology-note { font-size:11px; line-height:1.6; }
+
+  .contact-copy h2 { max-width:none !important; font-size:clamp(30px,8vw,40px) !important; line-height:1.1; }
+  .whatsapp-contact { padding:22px !important; border-radius:20px !important; min-width:0; }
+  .whatsapp-contact h3 { font-size:25px !important; }
+  .whatsapp-detail { padding:13px !important; overflow-wrap:anywhere; }
+  .whatsapp-button { padding:15px 18px !important; white-space:normal; }
+  .cta { padding:26px 22px !important; border-radius:22px !important; gap:22px; }
+  .cta h2 { font-size:clamp(27px,7vw,36px) !important; line-height:1.12; }
+  .footer-grid { grid-template-columns:minmax(0,1fr) !important; gap:24px !important; }
+  .footer-bottom { display:flex; flex-direction:column; gap:8px; line-height:1.5; }
+  footer { padding-bottom:28px; }
+}
+
+@media (max-width: 390px) {
+  .container { width:calc(100% - 26px) !important; }
+  .hero h1 { font-size:35px !important; letter-spacing:-1.3px !important; }
+  .hero-stats { gap:5px !important; }
+  .hero-stat { padding:8px 4px !important; }
+  .hero-stat span { font-size:8px !important; }
+  .hero-visual { min-height:310px !important; }
+  .output { padding:18px !important; }
+  .technology-details { padding:13px !important; }
+}
+
+</style>
 </head>
 
 
